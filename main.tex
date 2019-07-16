@@ -1,0 +1,18 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=0.5in,footskip=0.25in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\RequirePackage{ifthen}
+\usepackage{parallel}
+\usepackage{blindtext}
+
+\newcommand{\lang}[2]{\begin{Parallel}{9cm}{9cm}\ParallelLText{#1}\ParallelRText{#2}\ParallelPar \end{Parallel}}
+
+\begin{document}
+\lang{Text in Russian goes here}{Text in English will go here}
+\lang{Text in Russian goes here}{Text in English shall go here}
+\end{document}
