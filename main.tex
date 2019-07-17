@@ -11,12 +11,40 @@
 \usepackage{blindtext}
 
 \newcommand{\lang}[2]{\begin{Parallel}{9cm}{9cm}\ParallelLText{#1}\ParallelRText{#2}\ParallelPar \end{Parallel}}
+\newcommand{\ai}[2]{
+	\lang{
+		\texttt{#1}
+	}{
+		\texttt{#2}
+	}
+}
+
+\newcommand{\ainame}{AI NAME GOES HERE}
 
 \begin{document}
 \lang{Text in Russian goes here}{Text in English will go here}
 \lang{Text in Russian goes here}{Text in English shall go here}
 \iffalse
 Main idea for text: explore what happens if executive meddling is invoked on important technology (like internet is being broken by governments everywhere)
+
+Story outline: 
+tech inventor makes tech
+some influencer (govt, CEO, ...) tries to manipulate tech in order to serve some (not-public) interest
+influencer causes tech to have modification that serves non-public interest
+original creator breaks tech (TODO: add some choice of whether to break; keeping it must have benefit)
+people are unhappy when tech is modified, but less so when tech broken
+people independetly clone tech, so influencer incapable of controlling it
+
+Specifics:
+- tech is voice-activated AI, controls (pre-existing) connected devices 
+- influencer is president of country, controls by laws
+- modification is surveillance and automatic reporting (for reasons of law enforcement)
+%- reason it is broken is false triggering (that cannot be fixed: see https://www.theregister.co.uk/2017/11/17/its_artificial_its_intelligent_its_in_my_home_and_its_gone_bonkers/)
+
 \fi
+
+\ai{...}{Initializing... System online.}
+\lang{...}{``Oh good, it's finally booted. \ainame , what is seven plus eight?''}
+\ai{...}{Seven plus eight is five thousand seventy four point nine nine nine nine nine nine ni-}
 
 \end{document}
