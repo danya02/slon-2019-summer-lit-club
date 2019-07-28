@@ -19,14 +19,14 @@
 	}
 }
 
-\newcommand{\ainame}{AI NAME GOES HERE}
-\newcommand{\mainname}{MAIN CHAR NAME GOES HERE}
-\newcommand{\auxname}{SIDEKICK CHAR NAME GOES HERE}
-\newcommand{\corpname}{COMPANY NAME GOES HERE}
-\newcommand{\ceoname}{CEO NAME GOES HERE}
-\newcommand{\policename}{POLICE PERSON NAME GOES HERE}
-\newcommand{\featurename}{FEATURE NAME GOES HERE}
-\newcommand{\criminalname}{CRIMINAL PERSON NAME GOES HERE}
+\newcommand{\ainame}{Axeram}
+\newcommand{\mainname}{Simon}
+\newcommand{\auxname}{Mitch}
+\newcommand{\corpname}{ACME Inc.}
+\newcommand{\ceoname}{Mr. Rosswell}
+\newcommand{\policename}{Mr. Ghetsis}
+\newcommand{\featurename}{CrimCatch}
+\newcommand{\criminalname}{Kevin}
 
 
 \newcommand{\sceneplaceholder}[1]{SCENE PLACEHOLDER GOES HERE: #1. \blindtext}
@@ -142,7 +142,7 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{-- Сначала, если мы просто зайдём в дом, \ainame узнает нас, -- сказал \mainname, открывая переднюю дверь. -- Добро пожаловать.}{``First off, if we'll just come into the house, \ainame will recognize us,'' \mainname said, unlocking the front door. ``Come on over.''}
 \ai{Добрый день, \mainname. Добрый день, \ceoname. Добрый день, незнакомец. С вашего последнего входа почтальон принёс 6 новых писем, и вам было оставлено 4 сообщения на телефон. Что бы вы хотели посмотреть в первую очередь?}{Welcome, \mainname. Welcome, \ceoname. Welcome, guest. Since you last came home, 6 new mail messages have arrived and 4 phone calls have been recorded to voicemail. Which would you like to deal with first?}
 \lang{-- Потом когда-то, но спасибо за напоминание, -- сказал \mainname. -- Думаю, дальше тут нам делать нечего, -- он продолжил, выходя из дома и запирая его. -- Для настоящей же демонстрации нужен кто-то, кто будет взломщиком. Вы кого предложили бы?}{``Nothing, but thanks for telling me,'' said \mainname. ``I think we're done here,'' he said, walking back out of the house and locking the door behind him. ``Now for the real demo, I need someone to act as the intruder. Who did you have in mind?''}
-\lang{-- \criminalname, ты там где? Дуй быстро сюда! -- гаркнул \policename в свою рацию.}{``\criminalname, where are ya?! I need you over here quick!'' said \policename into his walkie-talkie.}
+\lang{-- \criminalname, ты там где? Дуй быстро сюда!}{``\criminalname, where are ya?! I need you over here quick!''}
 \lang{-- Я тут, что надо? -- сказал человек (\textbf{TODO:description}), вышедший из дверей \corpname.}{``Y-yeah?'' a man (\textbf{TODO:description}) said, coming out of the \corpname front entrance.}
 \lang{-- Где это ты шляешься? Я же сказал ждать здесь!}{``Where the hell are you? I told you to wait here!''}
 \lang{-- Да, я тут просто осматривал безопасность входа -- довольно качественно.}{``Yeah, I just wanted to check out the security of the lobby -- looks pretty solid.''}
@@ -168,7 +168,7 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{-- Эмм, а это что ещё за..? -- сказал \criminalname.}{``Um, what was that?'' \criminalname said.}
 \ai{Кодовая фраза неверна. Остается одна попытка.}{Passphrase incorrect. One attempt remaining.}
 \lang{Вот и \featurename запускается. Попробуй угадать пароль.}{``So that's \featurename activating now. Go ahead and see if you can solve it.''}
-\lang{-- Так, ну... "Торт -- это ложь?"}{``Okay, er... "The cake is a lie"?''}
+\lang{-- Так, ну... ``Торт -- это ложь?''}{``Okay, er... ,,The cake is a lie``?''}
 \ai{Ввод кодовой фразы неуспешен. Активируется изоляция здания.}{Passphrase input failed. Initiating lockdown.}
 \lang{-- Что? Нет, я же- -- только и успел сказать \criminalname до того, как его голос не заглушил железный лязг закрывающихся металлических ставней на всех дверях и окнах.}{``What? No, I'm-'' said \criminalname, just before his voice was drowned by the loud metal clangs of steel shutters rolling down on every door and window.}
 \lang{-- И вот почему нам надо несколько попыток, -- сказал \mainname, набирая PIN-код на своём планшете, и мгновенно ставни растворились. -- Эй, \criminalname, можно выходить!}{``And that's why we need multiple attempts,'' said \mainname, before entering a PIN code on his tablet, and immediately the shutters retracted. ``Hey \criminalname, you can come out now.''}
@@ -221,6 +221,32 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{...}{``Well you better get going as fast as possible, as I wanna get this deployed as soon as you can prove to me it's ready!'' said \policename, getting into the car and slamming the door.}
 \lang{...}{``Of course,'' said \mainname to the car, but it already drove off.}
 \lang{...}{``Whew, that was really close,'' said \ceoname, having remained silent for \mainname and \policename's conversation. ``So, uh, I'll leave you to it then?''}
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
+\lang{...}{``Hey everyone, \policename's nearly accepted \featurename!''}
+\lang{...}{``What, really? That's amazing!''}
+\lang{...}{``I know! Let's have a party!''}
+\ai{...}{Deploying party in 3... 2... 1.}
+\lang{...}{As the disco ball descended from the ceiling and the music started playing, \mainname caught \auxname's eye and motioned him towards the server room. Careful not to distract their cow-orkers, \mainname and \criminalname made their way over to the armored door, \auxname tapped his finger on the fingerprint scanner and they were in.}
+\lang{...}{``Did you hear everything?'' asked \mainname.}
+\lang{...}{``Yes. This is deeply troubling. Can you tell us what you know?''}
+\lang{...}{``Okay,'' -- said \criminalname, having already recovered from being wrapped in tape. -- ``From what I can tell, he plans to destroy \corpname's credibility. I think that the only reason I was sent here is because he wants me to die while fighting \featurename.''}
+\lang{...}{``\emph{What?!}'' \mainname and \auxname said at the same time.}
+\lang{...}{``Yeah, I know right? But anyway, if I were to survive-''}
+\lang{...}{``H-how can you talk so calmly about this? That's your life we're talking about!''}
+\lang{...}{\criminalname laughed. ``Because I've now seen that \featurename is dangerously unlethal, and that means I'm not in trouble right now. And I've already made a plan for escaping once I return to \policename, and failing that, I've stolen some poison from the last place I've been to -- should distract him for a while.''}
+\lang{...}{\mainname looked on in awe. This kid is so young, but he already worries about his own life -- with good reason, having seen what \policename is like. \emph{And} he already has an escape plan! He'd always thought that burglars were reckless, but \criminalname actually seemed to watch his step almost as well as himself. Almost.}
+\lang{...}{``Whatever the case, if I die, he will use that to claim you guys are planning to destroy the world or something. I'm not sure what he plans to do if I survive, but probably force you to install some backdoor or something so he could figure out how to use it to kill people -- again, discrediting you guys.''}
+\lang{...}{``Well, then that's a good thing we designed it specifically not to hurt anyone,'' -- said \mainname.}
+\lang{...}{``At any rate, we can't allow you to be carted off by \policename. What we'll do is run some simulations of a person breaking into the house, stream that to the tablet I gave him, and then claim you're in hospital -- that was his goal, right?''}
+\lang{...}{``It would prevent him from catching on for a while, true,'' \criminalname agreed.}
+\lang{...}{``Right. \auxname, please get onto that as fast as you can,'' \mainname said, and he hurried into the depths of the server room. ``And you need to stay in here for a while -- \ceoname may not like \policename very much, but they do have some sort of high-value financial deal going on so we have not to let him see you.''}
+\lang{...}{``Understood. Thank you for helping me out.''}
+\lang{...}{``No problem. Now we just wait.''}
+
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+
 
 
 \sceneplaceholder{Surveillance implemented mandatorily citywide, but false triggering, criminal intervention and problems}
