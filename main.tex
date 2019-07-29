@@ -1,8 +1,8 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[margin=0.5in,footskip=0.25in]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage[OT1]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage[T2A,T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -26,8 +26,10 @@
 \newcommand{\ceoname}{Mr. Rosswell}
 \newcommand{\policename}{Mr. Ghetsis}
 \newcommand{\featurename}{CrimCatch}
-\newcommand{\criminalname}{Kevin}
 
+\newcommand{\criminalname}{Kevin}
+\newcommand{\friendAname}{Dave}
+\newcommand{\friendBname}{Nick}
 
 \newcommand{\sceneplaceholder}[1]{SCENE PLACEHOLDER GOES HERE: #1. \blindtext}
 \begin{document}
@@ -51,8 +53,8 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{-- Я только что накатил новую версию на бэкенд, тебе стоит скачать новую прошивку, -- послышался голос \auxname из-за серверной стойки.}{``I just pushed a new version out on the backend, you might want to download the new firmware version,'' he heard \auxname say from behind the server rack.}
 \lang{-- Ах, так и есть. Сейчас быстренько скачаю, -- сказал \mainname, и все экраны в офисе вмиг показали вращающийся индикатор и слово ``\texttt{ЗАГРУЗКА}''.}{``Ah, so it is. Okay, let me just do that real quick,'' said \mainname, and in a moment, every screen in the office switched over to showing a spinning icon and the word ``\texttt{DOWNLOADING}''.}
 \lang{Обыкновенно, такое обширное прерывание остановило бы всю работу на день, потому что все ушли бы в бар на очень длинный обеденный перерыв. Но \mainname пошел к торговому автомату и, оглянувшись, посчитал, сколько людей пришли сегодня.}{Ordinarily, such a major interruption would halt all work for the day, as everyone in the office rushed to the pub for an extended lunch break. But as \mainname walked over to the vending machine, he looked around the office, trying to count how many people were in today.}
-\lang{-- Семь. Две недели подрад уже как.}{``Seven. That's 2 weeks in a row.''}
-\lang{Несмотря на то, что \corpname -- самый известный производитель умных усройств для дома, доходы компании оставляли желать лучшего. Продажи падали последние два года, в основном потому что более простые и более дешёвые альтернативы стали значительно доступнее. \ceoname, директор компании, сильно заблуждается, когда говорит, что в каждом доме должен быть автономный дрон для доставки еды.}{Despite \corpname's reputation as the leading provider of connected household technolody, its profit margins left a lot to be desired. Sales have been down for the last 2 years, mostly because cheaper, simpler alternatives to their products have become widely available. Despite what \ceoname, the company's CEO, would have you believe, not everyone wants an autonomous drone for food delivery.}
+\lang{-- Семь. Две недели подряд уже как.}{``Seven. That's 2 weeks in a row.''}
+\lang{Несмотря на то, что \corpname -- самый известный производитель умных устройств для дома, доходы компании оставляли желать лучшего. Продажи падали последние два года, в основном потому что более простые и более дешёвые альтернативы стали значительно доступнее. \ceoname, директор компании, сильно заблуждается, когда говорит, что в каждом доме должен быть автономный дрон для доставки еды.}{Despite \corpname's reputation as the leading provider of connected household technolody, its profit margins left a lot to be desired. Sales have been down for the last 2 years, mostly because cheaper, simpler alternatives to their products have become widely available. Despite what \ceoname, the company's CEO, would have you believe, not everyone wants an autonomous drone for food delivery.}
 \lang{-- Так, вы все сегодня хорошо поработали. Вот, угощайтесь -- за счёт компании! -- сказал \mainname, загружая в дрон бутылки с газировкой. Провожая его взглядом, он вспомнил, что в компании TransCorp, конкуренте \corpname, теперь используют военных десантных роботов как меру снижения затрат. Хотя бы тут до этого не дошло, хотя \ceoname и не на такое способен.}{``Okay, good work everybody. Let's have a round of drinks on the house!'' said \mainname, loading up the drone with soda cans. As it flew off over the empty cubicles, he remembered that one of their competitors, TransCorp, has decided to use military assault robots as a cost-cutting measure. At least it didn't come to that here, he thought, although he wouldn't put it past \ceoname.}
 \lang{Вот этот новый продукт, \ainame, должен решить все трудности компании. Под брендом \corpname продаются и микроволновки, и окна, и дверные звонки, и строго говоря это умные устройства, но они не ведут себя умно в отсутствии того, к чему подключаться. А если у вас есть \ainame, то вам надо только сказать, что вам нужно, и все устройства \corpname будут для этого задействованы. Вам лишь надо сказать о том, что хотите посмотреть фильм, и сразу попкорн готов, свет притушен, а телевизор включен и фильм скачан.}{Now this new product, \ainame, is supposed to fix all the company's problems. While a \corpname-branded microwave oven, or window, or doorbell, is technically a connected device, when there is nothing to connect to, it just works like a normal appliance. But in the presence of \ainame, you only need to say what you want to be done and the AI will use all your \corpname devices to do so. Meaning you just say that you want to watch a movie, and right away the popcorn is ready, the lights are dimmed, and your TV is ready to play.}
 \lang{Так в теории. Над проектом работает критически мало людей, поэтому больше времени все ждут, пока устройство -- а оно само выглядит, как банка газировки -- загрузится, подключится к серверам \auxname, а затем заявит, что семь плюс восемь -- пять тысяч семьдесят четыре точка девять девять девять девять девять. И даже это не было бы слишком плохо, но ведь понятно же, что директор зайдёт в самый неподходящий момент и скажет --}{That's the theory, anyway. With the project being so understaffed, it becomes more about waiting for the device -- itself resembling a soda can -- to boot, connect to \auxname's servers, and then claim that seven plus eight is five thousand seventy four point nine nine nine nine nine nine. That alone would not be so bad, except you just know the Boss's going to come in at the worst possible time and say --}
@@ -242,7 +244,7 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{...}{``Well, then that's a good thing we designed it specifically not to hurt anyone,'' -- said \mainname.}
 \lang{...}{``At any rate, we can't allow you to be carted off by \policename. What we'll do is run some simulations of a person breaking into the house, stream that to the tablet I gave him, and then claim you're in hospital -- that was his goal, right?''}
 \lang{...}{``It would prevent him from catching on for a while, true,'' \criminalname agreed.}
-\lang{...}{``Right. \auxname, please get onto that as fast as you can,'' \mainname said, and he hurried into the depths of the server room. ``And you need to stay in here for a while -- \ceoname may not like \policename very much, but they do have some sort of high-value financial deal going on so we have not to let him see you.''}
+\lang{...}{``Right. \auxname, please get onto that as fast as you can,'' \mainname said, and he hurried into the depths of the server room. ``And you need to stay in here for a while, perhaps until nightfall -- \ceoname may not like \policename very much, but they do have some sort of high-value financial deal going on so we have not to let him see you.''}
 \lang{...}{``Understood. Thank you for helping me out.''}
 \lang{...}{``No problem. Now we just wait.''}
 
@@ -264,6 +266,49 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{...}{``How did talking to \policename go?''}
 \lang{...}{``I'm not sure. When \ceoname told him that you're going to the ER room, he told us to deploy \featurename right now. Surely that can't mean he planned it all along?''}
 \lang{...}{``You did pay off the ER people, right? Can't have them telling \policename I'm not there. I'm sure you remembered, but just checking.''}
+\lang{...}{``Of course I did, it's standard proceedure innit?''}
+\lang{...}{``Well then, I think we should really deploy \featurename, because if we don't \policename might get suspicious.''}
+\lang{...}{\mainname entered his password into the computer, and immediately the \ainame soda can, as well as thousands of similar devices across the city, lit up as they downloaded the new update.}
+\lang{...}{``So now we're just waiting for something to happen?'' asked \auxname.}
+\lang{...}{``No need to wait, because it appears that something's going on in that house over there,'' \mainname said, pointing at the screen, where the city map was, because a crime alert has just appeared over one of the houses in the residential area. He clicked on it, and the screen showed a camera feed from inside the house: a well-decorated, opulent home with lots of shiny surfaces, the door of which has just been pushed ajar.}
+\ai{...}{Intruder detected. Please speak your passphrase at this time.}
+\lang{...}{``Right, so that's working. Wait- why is he backing away?''}
+\ai{...}{No passphrase supplied. Initiating lockdown.}
+\lang{...}{``So far so good. Wha- Why is he not in there?'' \mainname said, pointing at the front door, which had the metal shutter on it, but the intruder was nowhere to be seen.}
+\lang{...}{``Oh! He might have left before the shutter dropped down!'' realized \criminalname.}
+\ai{...}{Crime prevent3d sucCessfulLy. lOcxd0wN m0d3 \%IL1 R3m@1n @Cx1}
+\lang{...}{``What was that?''}
+\lang{...}{``Connection seems to be breaking up. That's odd...''}
+\ai{...}{C0xNCCsi0n R3sxt; Txving @@k@1n 1N \% \$ \# \@ ! Connection restored. Warning: Lockdown breached.}
+\lang{...}{``Cameras are back online, and... everything's gone!'' said \auxname, staring at the no-longer-shiny entrance. Everything that looked expensive has now been thrown around, and the whole place looks like something had expoded nearby -- oh wait, it actually has, because the door has been knocked off its hinges.}
+\lang{...}{``Right, so door-breaking explosives have not been accounted for in the \featurename system -- and apparently, neither have cellular jammers,'' said \criminalname, pointing at the message log which showed a short-lived cellular signal fault.}
+\lang{...}{``Are those commonly used in house burglary?''}
+\lang{...}{``Oh yes indeed, they are extremely useful.''}
+\lang{...}{``What? Another one?'' said \mainname, closing the camera window to see a new point light up on the map.}
+\lang{...}{``Aw, maaan! Are you really picking Faceless Void again?''}
+\lang{...}{``Well, you didn't want him, and now you shall \emph{face your doom!}''} % TODO: do more intricate character introduction
+\lang{...}{``Wait, how is that a crime? They're just gaming -- how did that set off \featurename? \ainame, debug mode on!''}
+\ai{...}{Warning: Your voice is too deep; it does not sound like you.}
+\lang{...}{``Hey, that's \friendAname and \friendBname! Why are they on here?'' asked \criminalname.}
+\lang{...}{``You know them?''}
+\lang{...}{``Yeah, they're my friends; what's happening-''}
+\lang{...}{``Well, just you wait \friendBname, I'm picking Tidehunter and then I'm gonna \emph{destroy} you!''}
+\ai{...}{Warning: You sound aggressive.}
+\lang{...}{``Are- are you saying that it's really listening for aggression?''}
+\lang{...}{``Hey, I didn't decide this! It was all in the specs!''}
+\lang{...}{``Weren't those written by \policename? I \emph{told} you you can't trust him!''}
+\lang{...}{``Well, I didn't know that then!''}
+\lang{...}{``Soo, what are you buying?'' asked \friendAname.}
+\lang{...}{``Hey, I'm not telling you that! You're just gonna get that same thing!''}
+\ai{...}{Warning: You sound evasive.}
+\lang{...}{``W- why is that even a thing it's listening for?!'' \criminalname said. ``Couldn't you see it's a bad idea when you were building it?''}
+\ai{...}{Analysis completed: it has been decided that you are not you.}
+\lang{...}{``You can't be serious!'' \mainname said. ``That's- can't you use the cameras?!''}
+\ai{...}{We have duly triggered your home's burglar alarm, switched off your washing machine and hermetically sealed your doors and windows.}
+\lang{...}{``What was that?!'' shouted \friendBname as the heavy metal shutters slammed shut.}
+\lang{...}{``I don't know! Wait, what's that metal thing on the windows?''}
+\ai{...}{Your robot dog has been reprogrammed to attack at will. Navigating to room 2.}
+
 
 
 \sceneplaceholder{Surveillance implemented mandatorily citywide, but false triggering, criminal intervention and problems}
