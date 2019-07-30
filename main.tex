@@ -9,20 +9,30 @@
 \RequirePackage{ifthen}
 \usepackage{parallel}
 \usepackage{blindtext}
+\usepackage{textcomp}
 
-\newcommand{\lang}[2]{\begin{Parallel}{9cm}{9cm}\ParallelLText{#1}\ParallelRText{#2}\ParallelPar \end{Parallel}}
+%\newcommand{\lang}[2]{
+%	\begin{Parallel}{9cm}{9cm}
+%		\ParallelLText{#1}
+%		\ParallelRText{#2}
+%		\ParallelPar
+%	\end{Parallel}
+%}
+
+\newcommand{\lang}[2]{ #2 \par}
 \newcommand{\ai}[2]{
 	\lang{
-		\texttt{#1}
+		-- \texttt{#1}
 	}{
-		\texttt{#2}
+		``\texttt{#2}''
 	}
 }
 
-\newcommand{\ainame}{Axeram}
+\newcommand{\ainame}{Jenny}
 \newcommand{\mainname}{Simon}
 \newcommand{\auxname}{Mitch}
 \newcommand{\corpname}{ACME Inc.}
+\newcommand{\corpnameshort}{ACME}
 \newcommand{\ceoname}{Mr. Rosswell}
 \newcommand{\policename}{Mr. Ghetsis}
 \newcommand{\featurename}{CrimCatch}
@@ -33,8 +43,6 @@
 
 \newcommand{\sceneplaceholder}[1]{SCENE PLACEHOLDER GOES HERE: #1. \blindtext}
 \begin{document}
-\lang{Text in Russian goes here}{Text in English will go here}
-\lang{Text in Russian goes here}{Text in English shall go here}
 \iffalse
 
 creator approached by ceo (with police), told to add surveillance, agrees because backstory.
@@ -47,64 +55,64 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \fi
 
 \ai{Инициализация... Система запущена.}{Initializing... System online.}
-\lang{-- Так, наконец-то загрузилось. \ainame, сколько будет семь плюс восемь?}{``Oh good, it's finally booted. \ainame, what is seven plus eight?''}
+\lang{-- Так, наконец-то загрузилось. \ainame{}, сколько будет семь плюс восемь?}{``Oh good, it's finally booted. \ainame{}, what is seven plus eight?''}
 \ai{Семь плюс восемь равно пять тысяч семьдесят четыре точка девять девять девять девять девять де- Выключение.}{Seven plus eight is five thousand seventy four point nine nine nine nine nine nine ni- Shutting down.}
-\lang{-- Что на \emph{этот} раз сломалось? -- спросил \mainname, вставая из-за стола.}{``Alright, what's broken \emph{this} time?'' \mainname asked, getting up from his desk.}
-\lang{-- Я только что выкатил новую версию на бэкенд, тебе стоит скачать новую прошивку, -- послышался голос \auxname из-за серверной стойки.}{``I just pushed a new version out on the backend, you might want to download the new firmware version,'' he heard \auxname say from behind the server rack.}
-\lang{-- Ах, так и есть. Сейчас быстренько скачаю, -- сказал \mainname, и все экраны в офисе вмиг показали вращающийся индикатор и слово ``\texttt{ЗАГРУЗКА}''.}{``Ah, so it is. Okay, let me just do that real quick,'' said \mainname, and in a moment, every screen in the office switched over to showing a spinning icon and the word ``\texttt{DOWNLOADING}''.}
-\lang{Обыкновенно, такое обширное прерывание остановило бы всю работу на день, потому что все ушли бы в бар на \emph{очень} длинный обеденный перерыв. Но \mainname пошел к торговому автомату и, оглянувшись, посчитал, сколько людей пришли сегодня.}{Ordinarily, such a major interruption would halt all work for the day, because everyone in the office would rush to the pub for an \emph{extended} lunch break. But as \mainname walked over to the vending machine, he looked around the office, trying to count how many people were in today.}
+\lang{-- Что на \emph{этот} раз сломалось? -- спросил \mainname{}, вставая из-за стола.}{``Alright, what's broken \emph{this} time?'' \mainname{} asked, getting up from his desk.}
+\lang{-- Я только что выкатил новую версию на бэкенд, тебе стоит скачать новую прошивку, -- послышался голос \auxname{} из-за серверной стойки.}{``I just pushed a new version out on the backend, you might want to download the new firmware version,'' he heard \auxname{} say from behind the server rack.}
+\lang{-- Ах, так и есть. Сейчас быстренько скачаю, -- сказал \mainname{}, и все экраны в офисе вмиг показали вращающийся индикатор и слово ``\texttt{ЗАГРУЗКА}''.}{``Ah, so it is. Okay, let me just do that real quick,'' said \mainname{}, and in a moment, every screen in the office switched over to showing a spinning icon and the word ``\texttt{DOWNLOADING}''.}
+\lang{Обыкновенно, такое обширное прерывание остановило бы всю работу на день, потому что все ушли бы в бар на \emph{очень} длинный обеденный перерыв. Но \mainname{} пошел к торговому автомату и, оглянувшись, посчитал, сколько людей пришли сегодня.}{Ordinarily, such a major interruption would halt all work for the day, because everyone in the office would rush to the pub for an \emph{extended} lunch break. But as \mainname{} walked over to the vending machine, he looked around the office, trying to count how many people were in today.}
 \lang{-- Семь. Две недели подряд уже как.}{``Seven. That's 2 weeks in a row.''}
-\lang{Несмотря на то, что \corpname -- самый известный производитель умных устройств для дома, доходы компании оставляли желать лучшего. Продажи падали последние два года, в основном потому что более простые и более дешёвые альтернативы стали значительно доступнее. \ceoname, директор компании, сильно заблуждается, когда говорит, что в каждом доме должен быть автономный дрон для доставки еды.}{Despite \corpname's reputation as the leading provider of connected household technolody, its profit margins left a lot to be desired. Sales have been down for the last 2 years, mostly because cheaper, simpler alternatives to their products have become widely available. Despite what \ceoname, the company's CEO, would have you believe, not everyone wants an autonomous drone for food delivery.}
-\lang{-- Так, вы все сегодня хорошо поработали. Вот, угощайтесь -- за счёт компании! -- сказал \mainname, загружая в дрон бутылки с газировкой. Провожая его взглядом, он вспомнил, что в компании TransCorp, конкуренте \corpname, теперь используют военных десантных роботов как меру снижения затрат. Хотя бы тут до этого не дошло, хотя \ceoname и не на такое способен.}{``Okay, good work everybody. Let's have a round of drinks on the house!'' said \mainname, loading up the drone with soda cans. As it flew off over the empty cubicles, he remembered that one of their competitors, TransCorp, has decided to use military assault robots as a cost-cutting measure. At least it didn't come to that here, he thought, although he wouldn't put it past \ceoname.}
-\lang{Вот этот новый продукт, \ainame, должен решить все трудности компании. Под брендом \corpname продаются и микроволновки, и окна, и дверные звонки, и строго говоря это умные устройства, но они не ведут себя умно, если нету центра, к которому они подключались бы. А если у вас есть \ainame, то вам надо только сказать, что вам нужно, и все устройства \corpname будут для этого задействованы. Вам лишь надо сказать о том, что хотите посмотреть фильм, и сразу попкорн готов, свет притушен, а телевизор включен и фильм скачан.}{Now this new product, \ainame, is supposed to fix all the company's problems. While a \corpname-branded microwave oven, or window, or doorbell, is technically a connected device, when there is nothing to connect to, it just works like a normal appliance. But in the presence of \ainame, you only need to say what you want to be done and the AI will use all your \corpname devices to do so. Meaning you just say that you want to watch a movie, and right away the popcorn is ready, the lights are dimmed, and your TV is ready to play.}
-\lang{Так оно работает только в теории. Над проектом работает критически мало людей, поэтому больше времени все ждут, пока устройство -- а оно само выглядит, как банка газировки -- загрузится, подключится к серверам \auxname, а затем заявит, что семь плюс восемь -- пять тысяч семьдесят четыре точка девять девять девять девять девять. И даже это не было бы слишком плохо, но ведь понятно же, что директор зайдёт в самый неподходящий момент и скажет --}{That's the theory, anyway. With the project being so understaffed, it becomes more about waiting for the device -- itself resembling a soda can -- to boot, connect to \auxname's servers, and then claim that seven plus eight is five thousand seventy four point nine nine nine nine nine nine. That alone would not be so bad, except you just know the Boss's going to come in at the worst possible time and say --}
+\lang{Несмотря на то, что \corpname{} -- самый известный производитель умных устройств для дома, доходы компании оставляли желать лучшего. Продажи падали последние два года, в основном потому что более простые и более дешёвые альтернативы стали значительно доступнее. \ceoname{}, директор компании, сильно заблуждается, когда говорит, что в каждом доме должен быть автономный дрон для доставки еды.}{Despite \corpname{}'s reputation as the leading provider of connected household technolody, its profit margins left a lot to be desired. Sales have been down for the last 2 years, mostly because cheaper, simpler alternatives to their products have become widely available. Despite what \ceoname{}, the company's CEO, would have you believe, not everyone wants an autonomous drone for food delivery.}
+\lang{-- Так, вы все сегодня хорошо поработали. Вот, угощайтесь -- за счёт компании! -- сказал \mainname{}, загружая в дрон бутылки с газировкой. Провожая его взглядом, он вспомнил, что в компании TransCorp, конкуренте \corpnameshort{}, теперь используют военных десантных роботов как меру снижения затрат. Хотя бы тут до этого не дошло, хотя \ceoname{} и не на такое способен.}{``Okay, good work everybody. Let's have a round of drinks on the house!'' said \mainname{}, loading up the drone with soda cans. As it flew off over the empty cubicles, he remembered that one of their competitors, TransCorp, has decided to use military assault robots as a cost-cutting measure. At least it didn't come to that here, he thought, although he wouldn't put it past \ceoname{}.}
+\lang{Вот этот новый продукт, \ainame{}, должен решить все трудности компании. Под брендом \corpnameshort{} продаются и микроволновки, и окна, и дверные звонки, и строго говоря это умные устройства, но они не ведут себя умно, если нету центра, к которому они подключались бы. А если у вас есть \ainame{}, то вам надо только сказать, что вам нужно, и все устройства \corpnameshort{} будут для этого задействованы. Вам лишь надо сказать о том, что хотите посмотреть фильм, и сразу попкорн готов, свет притушен, а телевизор включен и фильм скачан.}{Now this new product, \ainame{}, is supposed to fix all the company's problems. While a \corpnameshort{}-branded microwave oven, or window, or doorbell, is technically a connected device, when there is nothing to connect to, it just works like a normal appliance. But in the presence of \ainame{}, you only need to say what you want to be done and the AI will use all your \corpnameshort{} devices to do so. Meaning you just say that you want to watch a movie, and right away the popcorn is ready, the lights are dimmed, and your TV is ready to play.}
+\lang{Так оно работает только в теории. Над проектом работает критически мало людей, поэтому больше времени все ждут, пока устройство -- а оно само выглядит, как банка газировки -- загрузится, подключится к серверам \auxname{}, а затем заявит, что семь плюс восемь -- пять тысяч семьдесят четыре точка девять девять девять девять девять. И даже это не было бы слишком плохо, но ведь понятно же, что директор зайдёт в самый неподходящий момент и скажет --}{That's the theory, anyway. With the project being so understaffed, it becomes more about waiting for the device -- itself resembling a soda can -- to boot, connect to \auxname{}'s servers, and then claim that seven plus eight is five thousand seventy four point nine nine nine nine nine nine. That alone would not be so bad, except you just know the Boss's going to come in at the worst possible time and say --}
 
 
-\lang{-- Что не так с \ainame? }{``What is wrong with \ainame?''}
+\lang{-- Что не так с \ainame{}? }{``What is wrong with \ainame{}?''}
 
-\lang{-- Обновление системы. Займёт всего пару минут.}{``System update. Should take only a couple minutes,'' said \auxname.}
+\lang{-- Обновление системы. Займёт всего пару минут.}{``System update. Should take only a couple minutes,'' said \auxname{}.}
 
 \lang{-- А побыстрее никак? Я тут не могу весь день ждать!}{``Well you better hurry up, I ain't got all day y'know!''}
 
-\lang{Этот голос не был знаком \mainname. Он посмотрел в сторону двери и увидел рядом с \ceoname высокого мужчину в военной форме. ``Они что, правда собираются делать как в TransCorp?'' подумал он.}{This was a voice \mainname hadn't heard before. He turned around to see that beside \ceoname was a tall man in military uniform. ``Surely they can't be trying to pull the TransCorp thing on us?'' he thought.}
+\lang{Этот голос не был знаком \mainname{}. Он посмотрел в сторону двери и увидел рядом с \ceoname{} высокого мужчину в военной форме. ``Они что, правда собираются делать как в TransCorp?'' подумал он.}{This was a voice \mainname{} hadn't heard before. He turned around to see that beside \ceoname{} was a tall man in military uniform. ``Surely they can't be trying to pull the TransCorp thing on us?'' he thought.}
 
-\lang{-- Ах да, совсем забыл, нам необходимо представиться. Это \policename, начальник полиции нашего города. А это -- наша команда разрабоки \ainame, это \mainname, это \auxname-}{``Oh, I forgot, introductions are in order. This is \policename, our city's police chief. And this is our \ainame research team, there's \mainname and there's \auxname and-''}
+\lang{-- Ах да, совсем забыл, нам необходимо представиться. Это \policename{}, начальник полиции нашего города. А это -- наша команда разрабоки \ainame{}, это \mainname{}, это \auxname{}-}{``Oh, I forgot, introductions are in order. This is \policename{}, our city's police chief. And this is our \ainame{} research team, there's \mainname{} and there's \auxname{} and-''}
 
-\lang{-- Вот ваще не интересует, -- сказал \policename, и в этот момент все экраны показали ``\texttt{ЗАГРУЗКА ЗАВЕРШЕНА}'' и вернулись к обычному виду, -- После всей этой рекламной чуши мне очень нужен грёбанный напиток-}{``Don't care about any of that,'' said \policename, just as the screens flashed ``\texttt{DOWNLOAD COMPLETE}'' before returning to normal. ``After all of your marketing bullshit for this thing I just need a freaking drink-''}
+\lang{-- Вот ваще не интересует, -- сказал \policename{}, и в этот момент все экраны показали ``\texttt{ЗАГРУЗКА ЗАВЕРШЕНА}'' и вернулись к обычному виду, -- После всей этой рекламной чуши мне очень нужен грёбанный напиток-}{``Don't care about any of that,'' said \policename{}, just as the screens flashed ``\texttt{DOWNLOAD COMPLETE}'' before returning to normal. ``After all of your marketing bullshit for this thing I just need a freaking drink-''}
 
 \ai{Грёбанный напиток будет выдан через три... два... один.}{Deploying freaking drink in three... two... one.}
 
 \lang{-- ...А вот это полезно! -- сказал полицейский, а дрон в это время дал ему стакан чего-то, что похоже на виски, но вполне могло бы быть и яблочным соком. Неоднозначность эта его не смутила, и, залпом выпив неизвестный напиток, он продолжил: -- Мне эта штука начинает нравится! Теперь мне уже хочется посмотреть ту обещанную демонстрацию!}{``...Oh, that's helpful!'' the chief said, as the drinks drone handed him a cup of what seemed to be whiskey, but might as well have been apple juice. This ambiguity did not seem to bother him that much, and he continued after quaffing the whole cup: ``I'm beginning to like that thing! Can't wait to see that demo you've told me about!''}
 
-\lang{Это было неожиданно. \mainname точно помнил, что у них была единственная задача -- подготовить \ainame к продажам.}{This was unexpected. \mainname distinctly remembered that their only task for the upcoming weeks was to get \ainame ready for release.}
+\lang{Это было неожиданно. \mainname{} точно помнил, что у них была единственная задача -- подготовить \ainame{} к продажам.}{This was unexpected. \mainname{} distinctly remembered that their only task for the upcoming weeks was to get \ainame{} ready for release.}
 
-\lang{-- Ах да, совсем забыл! -- сказал \ceoname, подегая к столу \mainname и кидая на него большую стопку бумаг. -- Это новая спецификация.}{``Oh, I almost forgot!'' said \ceoname, rushing to \mainname's desk and handing him a large paper stack. ''This is the new design document.''}
+\lang{-- Ах да, совсем забыл! -- сказал \ceoname{}, подегая к столу \mainname{} и кидая на него большую стопку бумаг. -- Это новая спецификация.}{``Oh, I almost forgot!'' said \ceoname{}, rushing to \mainname{}'s desk and handing him a large paper stack. ''This is the new design document.''}
 
-\lang{-- Ах, так вот теперь изволите изменять цели? -- подумал \mainname, глядя на кипу из сотен листов с надписью: ``\featurename: техзадание''. -- Ну и про что всё это?}{``Changing the project scope now are we?..'' he thought, looking through the 100+ sheets of paper of impenetrable verbosity emblazoned with the words ``\featurename: Deliverables Specification''. ``So what's all this about?''}
+\lang{-- Ах, так вот теперь изволите изменять цели? -- подумал \mainname{}, глядя на кипу из сотен листов с надписью: ``\featurename{}: техзадание''. -- Ну и про что всё это?}{``Changing the project scope now are we?..'' he thought, looking through the 100+ sheets of paper of impenetrable verbosity emblazoned with the words ``\featurename{}: Deliverables Specification''. ``So what's all this about?''}
 
-\lang{-- Ну, вот тут \policename узнал про то, что мы делаем \ainame, и когда он узнал про функции, подумал- }{``Well, \policename here has heard about how we're developing the \ainame system, and when they heard about its features they thought it'd-''}
+\lang{-- Ну, вот тут \policename{} узнал про то, что мы делаем \ainame{}, и когда он узнал про функции, подумал- }{``Well, \policename{} here has heard about how we're developing the \ainame{} system, and when they heard about its features they thought it'd-''}
 
-\lang{-- А вот никак нельзя побыстрее? -- сказал \policename, и \ceoname замолк. -- Короче говоря, в городе полно преступности, и вы нам поможее справиться с ней. Ваша как-её-там может задерживать преступников -- воров, убийц, да кого угодно -- пока наши люди не приедут.}{``Do hurry up, won't ya?'' \policename said, cutting him off. ''Long story short, there's lots of crime in the city and we need your help to fix it. Your whats-it-called can detain criminals -- houseburglars, murderers, you name it -- until our people arrive.''}
+\lang{-- А вот никак нельзя побыстрее? -- сказал \policename{}, и \ceoname{} замолк. -- Короче говоря, в городе полно преступности, и вы нам поможее справиться с ней. Ваша как-её-там может задерживать преступников -- воров, убийц, да кого угодно -- пока наши люди не приедут.}{``Do hurry up, won't ya?'' \policename{} said, cutting him off. ''Long story short, there's lots of crime in the city and we need your help to fix it. Your whats-it-called can detain criminals -- houseburglars, murderers, you name it -- until our people arrive.''}
 
-\lang{-- Это превосходно! -- поддерживал директор, -- Наш анализ показывает уменьшение преступности на 50\% в течение первой недели! А если продажи \ainame будут выше, то будет ещё больше!}{``It's perfect!'' the Boss burbled. ''Our initial analysis shows a 50\% decrease in crime rate within the first week! Maybe even more if we sell more of \ainame!}
+\lang{-- Это превосходно! -- поддерживал директор, -- Наш анализ показывает уменьшение преступности на 50\% в течение первой недели! А если продажи \ainame{} будут выше, то будет ещё больше!}{``It's perfect!'' the Boss burbled. ''Our initial analysis shows a 50\% decrease in crime rate within the first week! Maybe even more if we sell more of \ainame{}!}
 
-\lang{\mainname задумался. С одной стороны, проект \ainame уже запаздывал, а добавление большего количества функций этому точно не поможет. Но с другой стороны, у него самого похожая система есть дома. Хотя она и была собрана с нуля за одни выходные, она позволяет ему смотреть на видео с камер видеонаблюдения, а также запирать двери и включать сирены, из любой точки мира. С тех пор, как его дом обокрали -- причём дважды подряд -- он понял, что иногда быть параноиком -- лучше, чем наоборот, а идея дать всем такую же защиту, как и у него, действительно казалась полезной.}{\mainname frowned. On the one hand, the \ainame project was already behind schedule, and adding more features will certainly not help that. But on the other hand, his own house does have a similar system installed. Built from scratch over a weekend, it allows him to monitor the security cameras, as well as lock the doors and invoke sirens, from anywhere in the world. Ever since his house got robbed -- twice in a row -- he's learned that being paranoid is usually better than the alternative, and the idea of giving everyone that same protection he had did seem like a useful thing to do.}
+\lang{\mainname{} задумался. С одной стороны, проект \ainame{} уже запаздывал, а добавление большего количества функций этому точно не поможет. Но с другой стороны, у него самого похожая система есть дома. Хотя она и была собрана с нуля за одни выходные, она позволяет ему смотреть на видео с камер видеонаблюдения, а также запирать двери и включать сирены, из любой точки мира. С тех пор, как его дом обокрали -- причём дважды подряд -- он понял, что иногда быть параноиком -- лучше, чем наоборот, а идея дать всем такую же защиту, как и у него, действительно казалась полезной.}{\mainname{} frowned. On the one hand, the \ainame{} project was already behind schedule, and adding more features will certainly not help that. But on the other hand, his own house does have a similar system installed. Built from scratch over a weekend, it allows him to monitor the security cameras, as well as lock the doors and invoke sirens, from anywhere in the world. Ever since his house got robbed -- twice in a row -- he's learned that being paranoid is usually better than the alternative, and the idea of giving everyone that same protection he had did seem like a useful thing to do.}
 
-\lang{-- ...Хорошо, мы сделаем это, но только после того, как \ainame будет уже в продаже.}{``...Okay, we'll do it, but only after the \ainame is ready.''}
+\lang{-- ...Хорошо, мы сделаем это, но только после того, как \ainame{} будет уже в продаже.}{``...Okay, we'll do it, but only after \ainame{} is ready.''}
 
-\lang{-- Чудесно! Тогда мы просто пока что разберёмся с деталями... Тогда давайте пройдём обратно ко мне в кабинет, сюда пожалуйста!..}{``Excellent! Then we'll just hammer out the details with \policename, and then we'll get back to you on that. Right this way please!..}
+\lang{-- Чудесно! Тогда мы просто пока что разберёмся с деталями... Тогда давайте пройдём обратно ко мне в кабинет, сюда пожалуйста!..}{``Excellent! Then we'll just hammer out the details with \policename{}, and then we'll get back to you on that. Right this way please!..}
 
-\lang{-- А ты уверен, что мы справимся? -- спросил \auxname, как только дверь за директором закрылась. ``Ведь нам таких прерываний, как сегодня, в релизе не нужно...''}{``...You sure we can make it?'' said \auxname, once the Boss had left. ``I mean, we wouldn't want any service interruptions like today in production...''}
+\lang{-- А ты уверен, что мы справимся? -- спросил \auxname{}, как только дверь за директором закрылась. ``Ведь нам таких прерываний, как сегодня, в релизе не нужно...''}{``...You sure we can make it?'' said \auxname{}, once the Boss had left. ``I mean, we wouldn't want any service interruptions like today in production...''}
 
 \lang{-- Да, это будет сложно, но на самом-то деле большинство функций уже реализовано, и осталось только несколько багов исправить. Сейчас вот система работает, и поэтому я могу сказать, что хочу шоколадный батончик-}{``Yes, it is going to be difficult, but to be honest, most of the features are in and there's only some bugs to fix left. Because currently it's working, which I can prove by saying I want a random chocolate bar-''}
 
 \ai{Доставляю шоколадный батончик.}{Deploying chocolate bar.}
 
-\lang{-- ...и вот он летит. Осторожнее, -- сказал \mainname, пока дрон пролетал рядом с \auxname.}{``...and away it goes. Be careful,'' said \mainname, as the drone whizzed past \auxname.}
+\lang{-- ...и вот он летит. Осторожнее, -- сказал \mainname{}, пока дрон пролетал рядом с \auxname{}.}{``...and away it goes. Be careful,'' said \mainname{}, as the drone whizzed past \auxname{}.}
 
 \lang{-- Ну, это может быть и так... -- он сказал, успешно уклонившись от дрона (хотя на самом деле это у дрона получилось успешно уклониться от \emph{него}.) А что у нас с расписанием?}{``Well, I suppose that's true...'' he said, having dodged the drone successfully (though really, it was more of the drone's achievement for having successfully dodged \emph{him}.) ``And what is our release schedule?''}
 
-\ai{Проект \ainame: версия 1.0 -- срок: 2 недели.}{Project \ainame: version 1.0 -- due in 2 weeks.}
+\ai{Проект \ainame{}: версия 1.0 -- срок: 2 недели.}{Project \ainame{}: version 1.0 -- due in 2 weeks.}
 
 \lang{-- А значит на следующие две недели, у нас...}{``So for the next two weeks, we have...''}
 
@@ -114,81 +122,81 @@ creator sees stats, is shocked, decides to disable and release as open-source
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
-\lang{-- Ребята, а вы видели последний отчёт по продажам? -- спросил \mainname, подняв глаза с клавиатуры.}{``Did you guys see the latest sales report?'' asked \mainname, looking up from the keyboard.}
+\lang{-- Ребята, а вы видели последний отчёт по продажам? -- спросил \mainname{}, подняв глаза с клавиатуры.}{``Did you guys see the latest sales report?'' asked \mainname{}, looking up from the keyboard.}
 \lang{-- Нет, а что?}{``No, why?''}
-\lang{-- По всей видимости, \ainame очень хорошо продается, прибыль поднялась на 9002\%.}{``Apparently \ainame is selling really well, we're up 9002\% in profits.}
-\lang{-- А это вообще возможно? -- спросил \auxname. -- Конечно, мы ожидали каких-то улучшений, но в 90 раз -- как-то многовато...}{``Is that even possible?'' asked \auxname. ``I mean, we did expect some sort of increase in sales, but 90 times seems too high?''}
-\lang{-- Так оно и есть, но ты сам взгляни, -- сказал \mainname, указывая на свой монитор. Оглянувшись вокруг, он заметил, что сегодня пришло значительно больше семи человек. После того, как он и все, кто был согласен на потрясающе низкие зарплаты, смогли-таки подготовить \ainame к выпуску, их начальник согласился, что их отдел надо значительно расширять.}{``Apparently so, but feel free to see for yourself,'' said \mainname, pointing at his computer. As he looked around, he noticed that significantly more than seven employees had come in today. After he and everyone who was accepting of the spectacularly low salaries had made \ainame ready for release, the Boss agreed that their department needs to be expanded.}
+\lang{-- По всей видимости, \ainame{} очень хорошо продается, прибыль поднялась на 9002\%.}{``Apparently \ainame{} is selling really well, we're up 9002\% in profits.}
+\lang{-- А это вообще возможно? -- спросил \auxname{}. -- Конечно, мы ожидали каких-то улучшений, но в 90 раз -- как-то многовато...}{``Is that even possible?'' asked \auxname{}. ``I mean, we did expect some sort of increase in sales, but 90 times seems too high?''}
+\lang{-- Так оно и есть, но ты сам взгляни, -- сказал \mainname{}, указывая на свой монитор. Оглянувшись вокруг, он заметил, что сегодня пришло значительно больше семи человек. После того, как он и все, кто был согласен на потрясающе низкие зарплаты, смогли-таки подготовить \ainame{} к выпуску, их начальник согласился, что их отдел надо значительно расширять.}{``Apparently so, but feel free to see for yourself,'' said \mainname{}, pointing at his computer. As he looked around, he noticed that significantly more than seven employees had come in today. After he and everyone who was accepting of the spectacularly low salaries had made \ainame{} ready for release, the Boss agreed that their department needs to be expanded.}
 \lang{И вот, заканчивая свою основную работу и готовясь обучить новых сотрудников, он почувствовал, в первый раз за полгода, что всё было хорошо. И ничего не могло бы заставить его передумать.}{And so it was that today, just as he was getting his main work done and getting ready to onboard some new employees, he felt, for the first time in the past 6 months, that everything was okay. Nothing could change his mind about this.}
-\lang{-- Всем привет, это \ceoname, как тут у всех дела?}{``Hey everyone, \ceoname here, how's it going?''}
+\lang{-- Всем привет, это \ceoname{}, как тут у всех дела?}{``Hey everyone, \ceoname{} here, how's it going?''}
 \lang{Даже это. Ну ладно, ну может чуть-чуть.}{Not even that. Well, maybe a little.}
-\lang{-- А, \mainname, вот ты где! Мне тут нужно знать, как продвигается проект \featurename.}{``Ah, \mainname, there you are! I just need some status on the \featurename project.''}
+\lang{-- А, \mainname{}, вот ты где! Мне тут нужно знать, как продвигается проект \featurename{}.}{``Ah, \mainname{}, there you are! I just need some status on the \featurename{} project.''}
 \lang{Ладно, \emph{сильно} передумать.}{Okay, a \emph{lot}.}
-\lang{-- Я же уже говорил вам, трекер задач там прямо в репозитории, а там пусто! -- сказал \mainname, показывая ему QR-код, распечатанный специально для таких, как он.}{``I've already told you, the issue tracker is right there on our repo -- and it's empty!'' said \mainname, showing him the QR code he'd printed specifically for the boss's benefit.}
+\lang{-- Я же уже говорил вам, трекер задач там прямо в репозитории, а там пусто! -- сказал \mainname{}, показывая ему QR-код, распечатанный специально для таких, как он.}{``I've already told you, the issue tracker is right there on our repo -- and it's empty!'' said \mainname{}, showing him the QR code he'd printed specifically for the boss's benefit.}
 \lang{-- Да, я туда уже посмотрел, но я вот не понял, готовы ли мы к демонстрации-}{``Yes, I've looked at it but what I don't get is if it's ready for the demo-''}
 \lang{-- \emph{Готовы} же, я же уже неделю назад говорил.}{``It \emph{is}, and I've told you as much a week ago already.''}
-\lang{-- \emph{ЧТО?!} -- неповторимый голос \policename прогремел по этажу.}{``\emph{WHAT?!}'' the unmistakable voice of \policename resounded through the office.}
+\lang{-- \emph{ЧТО?!} -- неповторимый голос \policename{} прогремел по этажу.}{``\emph{WHAT?!}'' the unmistakable voice of \policename{} resounded through the office.}
 \lang{-- Я-я не хотел задерживать этот п-проект, честно! -- начальник сказал, заикаясь. -- Я п-просто, знаете ли, п-пытался сделать так, ч-чтобы всё было, как вам понравится-}{``I-I didn't mean to slow down the project or anything, honest!'' the boss stammered. ''I w-was just, y'know, trying to make sure everything was exactly as you'd like-''}
 \lang{-- А вот что мне понравится, вас не должно волновать! Вот я вам уже дал всё, что нужно знать, и хочу увидеть результат. Прямо. \emph{Сейчас!}}{``Nevermind what I like! I gave you people all the information you would need, and I want that demo. Right. \emph{Now!}}
 \lang{--К-конечно, конечно!}{``O-of course, of course!''}
-\lang{-- И пусть \emph{он} пойдёт с нами! -- сказал \policename, указывая на \mainname.}{``And \emph{he} needs to go, too!'' \policename said, pointing at \mainname.}
-\lang{-- Хорошо. \ainame, принеси мне устройство удалённого доступа класса 42, -- сказал он жестяной банке на столе, и через пару секунд ему в руки упал планшет. -- Кстати, \auxname?}{``Very well. \ainame, get me a remote access device of class 42,'' he said to the soda can at his desk, and in a moment, the drone dropped a tablet into his hands. ``Oh, and \auxname?''}
+\lang{-- И пусть \emph{он} пойдёт с нами! -- сказал \policename{}, указывая на \mainname{}.}{``And \emph{he} needs to go, too!'' \policename{} said, pointing at \mainname{}.}
+\lang{-- Хорошо. \ainame{}, принеси мне устройство удалённого доступа класса 42, -- сказал он жестяной банке на столе, и через пару секунд ему в руки упал планшет. -- Кстати, \auxname{}?}{``Very well. \ainame{}, get me a remote access device of class 42,'' he said to the soda can at his desk, and in a moment, the drone dropped a tablet into his hands. ``Oh, and \auxname{}?''}
 \lang{-- Да? -- ответил он, прервавшись в объяснении кода новому сотруднику.}{``Yeah?'' he replied, in the middle of explaining something about the codebase to a new employee.}
 \lang{-- А ты можешь включить запись камер в выставочном домике?}{``Can you start a recording of the showroom cameras now?''}
 \lang{-- Сейчас будет. Ну, я думаю, ты тут разберешься и без меня, а если что-то нужно будет, ссылку на доки я тебе уже оставил,-- сказал он, попрощавшись с сотрудником и направившись к своему столу.}{``Right away. Well, I think you've got this, and if you need anything just look at the docs,'' he said, waving the person goodbye and going to his desk.}
-\lang{-- Так с этим разобрались. Пройдёмте же? Ах, да, совсем забыл: один \emph{грёбанный} напиток специально для \policename.}{``Right, that's that sorted. Shall we go then? Oh, and, before I forget: \ainame, one \emph{freaking} drink for \policename.}
+\lang{-- Так с этим разобрались. Пройдёмте же? Ах, да, совсем забыл: один \emph{грёбанный} напиток специально для \policename{}.}{``Right, that's that sorted. Shall we go then? Oh, and, before I forget: \ainame{}, one \emph{freaking} drink for \policename{}.}
 \ai{Доставляю ГрЁБаНнЫй напиток}{Deploying fREakInG drink.}
-\lang{И, как и в тот раз, стакан неопознаваемой жидкости -- может быть виски, может быть яблочный сок, может быть разведенная краска, уже было всё равно -- прилетела к \policename, и он опять был невозмутим по поводу напитка, пока они вместе вошли в лифт, вышли из парадного входа, и дошли до домика для демонстраций -- хотя, выпив его, он более-менее успокоился.}{And, just like before, a cup of unknowable liquid -- could be whiskey, could be apple juice, could be diluted paint for all he cared -- made its way over to \policename, and he seemed as unfazed as ever about the beverage as they walked out the door, out the front entrance and towards the showroom -- though drinking it did seem to have calmed him down.}
+\lang{И, как и в тот раз, стакан неопознаваемой жидкости -- может быть виски, может быть яблочный сок, может быть разведенная краска, уже было всё равно -- прилетела к \policename{}, и он опять был невозмутим по поводу напитка, пока они вместе вошли в лифт, вышли из парадного входа, и дошли до домика для демонстраций -- хотя, выпив его, он более-менее успокоился.}{And, just like before, a cup of unknowable liquid -- could be whiskey, could be apple juice, could be diluted paint for all he cared -- made its way over to \policename{}, and he seemed as unfazed as ever about the beverage as they walked out the door, out the front entrance and towards the showroom -- though drinking it did seem to have calmed him down.}
 
-\lang{-- Вот мы и здесь, тут мы проводим демонстрации \ainame, -- сказал \ceoname, как только они дошли до маленького двухэтажного домика рядом с главным зданием \corpname.}{``This is it, our showroom for \ainame,'' said \ceoname, as they stopped at a small 2-floor house right next to \corpname's main building.}
-\lang{-- Сначала, если мы просто зайдём в дом, \ainame узнает нас, -- сказал \mainname, открывая переднюю дверь. -- Добро пожаловать.}{``First off, if we'll just come into the house, \ainame will recognize us,'' \mainname said, unlocking the front door. ``Come on over.''}
-\ai{Добрый день, \mainname. Добрый день, \ceoname. Добрый день, незнакомец. С вашего последнего входа почтальон принёс 6 новых писем, и вам было оставлено 4 сообщения на телефон. Что бы вы хотели посмотреть в первую очередь?}{Welcome, \mainname. Welcome, \ceoname. Welcome, guest. Since you last came home, 6 new mail messages have arrived and 4 phone calls have been recorded to voicemail. Which would you like to deal with first?}
-\lang{-- Потом когда-то, но спасибо за напоминание, -- сказал \mainname. -- Думаю, дальше тут нам делать нечего, -- он продолжил, выходя из дома и запирая его. -- Для настоящей же демонстрации нужен кто-то, кто будет взломщиком. Вы кого предложили бы?}{``Nothing, but thanks for telling me,'' said \mainname. ``I think we're done here,'' he said, walking back out of the house and locking the door behind him. ``Now for the real demo, I need someone to act as the intruder. Who did you have in mind?''}
-\lang{-- \criminalname, ты там где? Дуй быстро сюда!}{``\criminalname, where are ya?! I need you over here quick!''}
-\lang{-- Я тут, что надо? -- сказал молодой человек с сумкой через плечо, вышедший из дверей \corpname.}{``Y-yeah?'' a young man with a shoulder bag said, coming out of the \corpname front entrance.}
+\lang{-- Вот мы и здесь, тут мы проводим демонстрации \ainame{}, -- сказал \ceoname{}, как только они дошли до маленького двухэтажного домика рядом с главным зданием \corpname{}.}{``This is it, our showroom for \ainame{},'' said \ceoname{}, as they stopped at a small 2-floor house right next to \corpname{}'s main building.}
+\lang{-- Сначала, если мы просто зайдём в дом, \ainame{} узнает нас, -- сказал \mainname{}, открывая переднюю дверь. -- Добро пожаловать.}{``First off, if we'll just come into the house, \ainame{} will recognize us,'' \mainname{} said, unlocking the front door. ``Come on over.''}
+\ai{Добрый день, \mainname{}. Добрый день, \ceoname{}. Добрый день, незнакомец. С вашего последнего входа почтальон принёс 6 новых писем, и вам было оставлено 4 сообщения на телефон. Что бы вы хотели посмотреть в первую очередь?}{Welcome, \mainname{}. Welcome, \ceoname{}. Welcome, guest. Since you last came home, 6 new mail messages have arrived and 4 phone calls have been recorded to voicemail. Which would you like to deal with first?}
+\lang{-- Потом когда-то, но спасибо за напоминание, -- сказал \mainname{}. -- Думаю, дальше тут нам делать нечего, -- он продолжил, выходя из дома и запирая его. -- Для настоящей же демонстрации нужен кто-то, кто будет взломщиком. Вы кого предложили бы?}{``Nothing, but thanks for telling me,'' said \mainname{}. ``I think we're done here,'' he said, walking back out of the house and locking the door behind him. ``Now for the real demo, I need someone to act as the intruder. Who did you have in mind?''}
+\lang{-- \criminalname{}, ты там где? Дуй быстро сюда!}{``\criminalname{}, where are ya?! I need you over here quick!''}
+\lang{-- Я тут, что надо? -- сказал молодой человек с сумкой через плечо, вышедший из дверей \corpnameshort{}.}{``Y-yeah?'' a young man with a shoulder bag said, coming out of the \corpnameshort{} front entrance.}
 \lang{-- Где это ты шляешься? Я же сказал ждать здесь!}{``Where the hell are you? I told you to wait here!''}
 \lang{-- Да, я тут просто осматривал безопасность входа -- довольно качественно.}{``Yeah, I just wanted to check out the security of the lobby -- looks pretty solid.''}
-\lang{-- Этого парня зовут \criminalname. Его судили за кражу со взломом, а теперь он работает на полицию, и у меня нет никого лучше для этой задачи.}{``Everyone, this is \criminalname. He's a convicted burglar working for the police, and I'd say he's the best man for the job.''}
+\lang{-- Этого парня зовут \criminalname{}. Его судили за кражу со взломом, а теперь он работает на полицию, и у меня нет никого лучше для этой задачи.}{``Everyone, this is \criminalname{}. He's a convicted burglar working for the police, and I'd say he's the best man for the job.''}
 \lang{-- Ну про это я не знаю, вы там нашли меня довольно быстро, -- усмехнулся он. -- Но если вы уж думаете, что я так хорош...}{``Well, I dunno about that, you caught me out pretty quickly,'' he chuckled. ``But if you really think I'm good enough...''}
-\lang{\mainname осмотрел пришедшего человека. Он привык, когда есть время, рассматривать людей и пытаться понять их историю. \criminalname выглядел, как будто был в тюрьме некоторое время -- это просто видно по его походке и по тому, как он постоянно осматривается. Но вот не было похоже, чтобы он занимался грабежом в какой-либо степени. Вот украсть что-то из магазина -- теоретически да (люди любят заниматься таким, когда им окого шестнадцати лет), но вот кража со взломом -- никак нет. И к своему удивлению, \mainname осознал, что он не может определить, за что его засудили. Но ничего страшного, подумал он, может он догадается потом. Сейчас у них была задача.}{\mainname surveyed the newcomer. It was a favorite pasttime of his, just looking at people and trying to understand their backstory. \criminalname did seem like he had spent some time in prison -- it's just something about how he walks and how he seems to constantly look around. But he also seemed too young to have done any significant robbery. Shoplifting, yes (people around 16 do that a lot), but certainly not breaking and entering. In fact, \mainname found himself completely unable to determine what he was ``in for'', so to speak. But not to worry, he thought, perhaps later he will figure it out. They had a task at hand.}
-\lang{-- Итак, \criminalname, твоя задача -- это украсть плюшевого пингвина из спальни. Выглядит он так, -- сказал он, открыв на планшете фотографию пингвинчика. -- Схема первого этажа выглядит вот так, -- продолжил он, прокручивая изображения, -- а спальня вот тут. Там внутри камеры, датчики движения и запертые двери, поэтому надо выглядеть естественно.}{``All right \criminalname, your task is going to be to grab a plush penguin from the bedroom. It looks like this,'' \mainname said, showing him a photo of the penguin in question on his tablet. ''The floor plan looks like this,'' he continued, swiping right on his tablet, ''and the bedroom is right here. You're going to encounter cameras, motion sensors and locked doors inside, so be careful to act naturally.}
+\lang{\mainname{} осмотрел пришедшего человека. Он привык, когда есть время, рассматривать людей и пытаться понять их историю. \criminalname{} выглядел, как будто был в тюрьме некоторое время -- это просто видно по его походке и по тому, как он постоянно осматривается. Но вот не было похоже, чтобы он занимался грабежом в какой-либо степени. Вот украсть что-то из магазина -- теоретически да (люди любят заниматься таким, когда им окого шестнадцати лет), но вот кража со взломом -- никак нет. И к своему удивлению, \mainname{} осознал, что он не может определить, за что его засудили. Но ничего страшного, подумал он, может он догадается потом. Сейчас у них была задача.}{\mainname{} surveyed the newcomer. It was a favorite pasttime of his, just looking at people and trying to understand their backstory. \criminalname{} did seem like he had spent some time in prison -- it's just something about how he walks and how he seems to constantly look around. But he also seemed too young to have done any significant robbery. Shoplifting, yes (people around 16 do that a lot), but certainly not breaking and entering. In fact, \mainname{} found himself completely unable to determine what he was ``in for'', so to speak. But not to worry, he thought, perhaps later he will figure it out. They had a task at hand.}
+\lang{-- Итак, \criminalname{}, твоя задача -- это украсть плюшевого пингвина из спальни. Выглядит он так, -- сказал он, открыв на планшете фотографию пингвинчика. -- Схема первого этажа выглядит вот так, -- продолжил он, прокручивая изображения, -- а спальня вот тут. Там внутри камеры, датчики движения и запертые двери, поэтому надо выглядеть естественно.}{``All right \criminalname{}, your task is going to be to grab a plush penguin from the bedroom. It looks like this,'' \mainname{} said, showing him a photo of the penguin in question on his tablet. ''The floor plan looks like this,'' he continued, swiping right on his tablet, ''and the bedroom is right here. You're going to encounter cameras, motion sensors and locked doors inside, so be careful to act naturally.}
 \lang{-- Настолько легко мне не надо делать, -- засмеялся он. -- Ты что, так сильно в меня не веришь?}{``You don't have to go easy on me, you know?'' he laughed. ``It almost seems like you don't believe in me.''}
-\lang{-- Нет, это самый минимум информации, что тебе потребуется, чтобы хотя бы как-то противостоять \featurename. Но, в отлиции от реальной жизни, если у тебя в первый раз не получится, ты можешь попробовать заново, а я тебе дам подсказку.}{``No, this is the bare minimum of information you need to stand any sort of chance against \featurename. But unlike real life, if you don't succeed, you can try again and I'll tell you something else.''}
-\lang{-- Вы что, серьёзно даёте ему \emph{несколько попыток}? -- спросил \policename удивлённо.}{``Wait, you're giving him \emph{multiple tries}?'' \policename asked, surprised.}
-\lang{--Ну да, почему бы нет? Кажется, тебе нравятся прикольные игры, поэтому и поэтому мы и это превратим в игру! Я тут даже прикрутил к \featurename систему оценивания.}{``Yeah, sure, why not? You seem like the type of person who enjoys a fun game, so let's make this one! Especially since I've added a scoring system to \featurename.''}
+\lang{-- Нет, это самый минимум информации, что тебе потребуется, чтобы хотя бы как-то противостоять \featurename{}. Но, в отлиции от реальной жизни, если у тебя в первый раз не получится, ты можешь попробовать заново, а я тебе дам подсказку.}{``No, this is the bare minimum of information you need to stand any sort of chance against \featurename{}. But unlike real life, if you don't succeed, you can try again and I'll tell you something else.''}
+\lang{-- Вы что, серьёзно даёте ему \emph{несколько попыток}? -- спросил \policename{} удивлённо.}{``Wait, you're giving him \emph{multiple tries}?'' \policename{} asked, surprised.}
+\lang{--Ну да, почему бы нет? Кажется, тебе нравятся прикольные игры, поэтому и поэтому мы и это превратим в игру! Я тут даже прикрутил к \featurename{} систему оценивания.}{``Yeah, sure, why not? You seem like the type of person who enjoys a fun game, so let's make this one! Especially since I've added a scoring system to \featurename{}.''}
 \lang{-- Круто!}{``Aw yeah!''}
-\lang{-- Мы будем следить за твоим продвижением отсюда, -- сказал \mainname, указывая на планшет. -- Первое препятствие -- замок на входной двери. Время начинается... сейчас.}{``So we'll be monitoring your progress through this,'' \mainname said, pointing at his tablet. ''Your first task is going to be to pick the lock on the front door. Your time starts... now.''}
+\lang{-- Мы будем следить за твоим продвижением отсюда, -- сказал \mainname{}, указывая на планшет. -- Первое препятствие -- замок на входной двери. Время начинается... сейчас.}{``So we'll be monitoring your progress through this,'' \mainname{} said, pointing at his tablet. ''Your first task is going to be to pick the lock on the front door. Your time starts... now.''}
 \lang{-- Окей, поехали. Тут замок... тут что, тумблерный замок? Их же, прям, \emph{супер} просто взламывать!}{``Okay, here we go. The lock in here is a... is that a tumbler lock? Those are, like, \emph{super} easy to pick!''}
 \lang{-- Говори потише, но да, так и запланировано. И вот такая подсказка -- там довольно легко его вообще обойти.}{``You might want to keep your voice down, but yes, that's by design. Just a quick hint -- you can bypass it quite easily as well.''}
-\lang{-- Я же попросил, не надо мне так всё облегчать! -- сказал \criminalname, доставая из сумки набор отмычек.}{``I told you, you don't have to make it so easy for me!'' said \criminalname, fishing out from his bag a set of lockpicks.}
+\lang{-- Я же попросил, не надо мне так всё облегчать! -- сказал \criminalname{}, доставая из сумки набор отмычек.}{``I told you, you don't have to make it so easy for me!'' said \criminalname{}, fishing out from his bag a set of lockpicks.}
 \lang{-- Так ведь я и не упрощаю. Вот честно, я просто хочу, чтобы ты разобрался побыстрее.}{``I'm not. I'm genuinely not, I just want you to get through this as quickly as you can.''}
 \lang{-- Ну да, ну ладно, -- сказал он, достав длинную гнутую металическую штуку и заклинив ею замок. -- Что?! Он уже открылся?!}{``Yeah, yeah, whatever,'' he said, getting a long, wavy piece of metal and wedging it in the lock. ``What?! I'm already in?!''}
 \lang{-- Так, а вот \emph{теперь} честно надо быть тихим.}{``Right, \emph{now} you genuinely do have to keep your voice down.''}
-\lang{-- Хорошо, -- прошептал \criminalname, крадясь в дом.}{``Okay,'' \criminalname whispered as he tiptoed into the house.}
-\lang{-- А всё-таки, как это у него получилось взломать этот замок так быстро? -- спросил \policename. -- Таких слабых замков я ещё не видел!}{``How did he manage to defeat that lock so quickly?'' \policename asked. ``All the other locks we've had are much harder to break than that!''}
-\lang{-- Это значит, вы никогда не встречались с таким восхитительным предложением, как замки на развес от дяди Серёжи. Там обязательная бесплатная установка, что значит, что странноватый человек ставит вам на весь дом замки очень сомнительного качества, вроде как этот, -- \mainname указал на открытую дверь. -- Но Это не важно, потому что вот прям сейчас-}{``Ah, so you've never experienced the joy of Uncle Joe's One-Dollar Lock Special, wherein you get a shady dude to fit your house with locks of questionable quality, just like this one,'' \mainname said, pointing at the front door. ``But that's okay, because any second now-''}
+\lang{-- Хорошо, -- прошептал \criminalname{}, крадясь в дом.}{``Okay,'' \criminalname{} whispered as he tiptoed into the house.}
+\lang{-- А всё-таки, как это у него получилось взломать этот замок так быстро? -- спросил \policename{}. -- Таких слабых замков я ещё не видел!}{``How did he manage to defeat that lock so quickly?'' \policename{} asked. ``All the other locks we've had are much harder to break than that!''}
+\lang{-- Это значит, вы никогда не встречались с таким восхитительным предложением, как замки на развес от дяди Серёжи. Там обязательная бесплатная установка, что значит, что странноватый человек ставит вам на весь дом замки очень сомнительного качества, вроде как этот, -- \mainname{} указал на открытую дверь. -- Но Это не важно, потому что вот прям сейчас-}{``Ah, so you've never experienced the joy of Uncle Joe's One-Dollar Lock Special, wherein you get a shady dude to fit your house with locks of questionable quality, just like this one,'' \mainname{} said, pointing at the front door. ``But that's okay, because any second now-''}
 \ai{Замечено подозрительное поведение. Пожалуйста, произнесите кодовую фразу сейчас.}{Suspicious behaviour detected. Please speak your passphrase at this time.}
-\lang{-- Эмм, а это что ещё за..? -- сказал \criminalname.}{``Um, what was that?'' \criminalname said.}
+\lang{-- Эмм, а это что ещё за..? -- сказал \criminalname{}.}{``Um, what was that?'' \criminalname{} said.}
 \ai{Кодовая фраза неверна. Остается одна попытка.}{Passphrase incorrect. One attempt remaining.}
-\lang{Вот и \featurename запускается. Попробуй угадать пароль.}{``So that's \featurename activating now. Go ahead and see if you can solve it.''}
+\lang{Вот и \featurename{} запускается. Попробуй угадать пароль.}{``So that's \featurename{} activating now. Go ahead and see if you can solve it.''}
 \lang{-- Так, ну... ``Торт -- это ложь?''}{``Okay, er... ,,The cake is a lie``?''}
 \ai{Ввод кодовой фразы неуспешен. Активируется изоляция здания.}{Passphrase input failed. Initiating lockdown.}
-\lang{-- Что? Нет, я же- -- только и успел сказать \criminalname до того, как его голос не заглушил железный лязг закрывающихся металлических ставней на всех дверях и окнах.}{``What? No, I'm-'' said \criminalname, just before his voice was drowned by the loud metal clangs of steel shutters rolling down on every door and window.}
-\lang{-- И вот почему нам надо несколько попыток, -- сказал \mainname, набирая PIN-код на своём планшете, и мгновенно ставни растворились. -- Эй, \criminalname, можно выходить!}{``And that's why we need multiple attempts,'' said \mainname, before entering a PIN code on his tablet, and immediately the shutters retracted. ``Hey \criminalname, you can come out now.''}
+\lang{-- Что? Нет, я же- -- только и успел сказать \criminalname{} до того, как его голос не заглушил железный лязг закрывающихся металлических ставней на всех дверях и окнах.}{``What? No, I'm-'' said \criminalname{}, just before his voice was drowned by the loud metal clangs of steel shutters rolling down on every door and window.}
+\lang{-- И вот почему нам надо несколько попыток, -- сказал \mainname{}, набирая PIN-код на своём планшете, и мгновенно ставни растворились. -- Эй, \criminalname{}, можно выходить!}{``And that's why we need multiple attempts,'' said \mainname{}, before entering a PIN code on his tablet, and immediately the shutters retracted. ``Hey \criminalname{}, you can come out now.''}
 \lang{-- Что это было?! Это был самый громкий звук, что я слышал!}{``What was that?! That was, like, the loudest thing I've ever heard!''}
 \lang{-- Тебя заперли. Я бы сказал, что это неудача, но зато ты прошел дверь быстрее всех игроков. Поэтому ты... ниже 46\% игроков, -- он сказал, показывая таблицу результатов на планшете.}{``You got locked in. I'd say that's a failure, although having said that, you did get through the front door faster than anyone else on record. That makes you... worse than 46\% of players, '' he said, showing him the leaderboard on his tablet.}
-\lang{-- Эээ, а эти данные откуда? -- спросил \ceoname.}{``Uhh, where did this data come from?'' asked \ceoname.}
+\lang{-- Эээ, а эти данные откуда? -- спросил \ceoname{}.}{``Uhh, where did this data come from?'' asked \ceoname{}.}
 \lang{-- Это было две недели назад. После того, как мы разработали систему, я и 
- \auxname и ещё пара друзей собрались и попытались заниматься тем же самым, чем сейчас. Тот, кто побеждает, получает три тысячи рублей на пиво. \auxname выиграл, хоть он и тоже потерпел поражение -- его заметил робот-пылесос.}{``That's from two weeks ago. After we finished designing the system, me and \auxname and a couple of friends got together and tried to do basically the same thing we're doing now. Whoever wins gets fifty dollars in beer money -- \auxname won, even though he also failed -- he got sighted by the cleaning bot.''}
+ \auxname{} и ещё пара друзей собрались и попытались заниматься тем же самым, чем сейчас. Тот, кто побеждает, получает три тысячи рублей на пиво. \auxname{} выиграл, хоть он и тоже потерпел поражение -- его заметил робот-пылесос.}{``That's from two weeks ago. After we finished designing the system, me and \auxname{} and a couple of friends got together and tried to do basically the same thing we're doing now. Whoever wins gets fifty dollars in beer money -- \auxname{} won, even though he also failed -- he got sighted by the cleaning bot.''}
 \lang{-- А почему это я ничего не знаю про это?}{``How come I don't know anything about this?''}
-\lang{-- Я был уверен, что знаете. Эти ставни оттуда точно слышны,-- сказал \mainname, указывая на здание \corpname, где находится офис \ceoname.}{``I was sure you did -- the shutters are certainly audible from up there,'' said \mainname, pointing up at \corpname's HQ, right where the Boss's office is.}
+\lang{-- Я был уверен, что знаете. Эти ставни оттуда точно слышны,-- сказал \mainname{}, указывая на здание \corpnameshort{}, где находится офис \ceoname{}.}{``I was sure you did -- the shutters are certainly audible from up there,'' said \mainname{}, pointing up at \corpnameshort{}'s HQ, right where the Boss's office is.}
 \lang{-- Ах, так это было из-за этого? Я просто думал, что там стройка какая-то или чего-то.}{``Oh, so that was the reason? I just thought they're building something down the road or something.''}
-\lang{-- Ну так можно попробовать ещё? Мне кажется, я не был готов, -- спросил \criminalname.}{``Well, can I try again? I don't think I was ready.'' asked \criminalname.}
+\lang{-- Ну так можно попробовать ещё? Мне кажется, я не был готов, -- спросил \criminalname{}.}{``Well, can I try again? I don't think I was ready.'' asked \criminalname{}.}
 \lang{-- Хорошо, хотя в реальной жизни только одна попытка. Вот тогда тебе подсказка: попробуй вести себя поестественнее. Люди обыкнрвенно не крадутся к себе домой.}{``All right, even though you only get one attempt in real life. Now for a little hint, you might want to try and behave naturally -- because people don't usually tiptoe into their home.}
-\lang{-- Окей, давай-ка я быстро сбегаю и схвачу газовый резак, -- \criminalname сказал, подбегая к полицейской машине, припаркованной рядом.}{``Okay, just gimme a moment, I just wanna grab the blowtorch out of the car,'' \criminalname said, running over to the police vehicle parked nearby.}
-\lang{-- Так, а мы можем это разрешить? -- нервно спросил \ceoname.}{``Um, can we authorise this?'' \ceoname asked nervously.}
+\lang{-- Окей, давай-ка я быстро сбегаю и схвачу газовый резак, -- \criminalname{} сказал, подбегая к полицейской машине, припаркованной рядом.}{``Okay, just gimme a moment, I just wanna grab the blowtorch out of the car,'' \criminalname{} said, running over to the police vehicle parked nearby.}
+\lang{-- Так, а мы можем это разрешить? -- нервно спросил \ceoname{}.}{``Um, can we authorise this?'' \ceoname{} asked nervously.}
 \lang{-- Ну да, а почему бы и нет? Дом же умеет сам чиниться, так что всё должно быть в порядке.}{``Sure, why not? The house is self-repairing after all, so we should be okay.''}
-\lang{-- Мне просто хочется посмотреть, что будет, если попробовать прорезать себе выход, -- сказал \criminalname, держа в руках резак.}{``I just wanna see what happens if you try and cut your way out of there,'' said \criminalname, blowtorch in hand.}
+\lang{-- Мне просто хочется посмотреть, что будет, если попробовать прорезать себе выход, -- сказал \criminalname{}, держа в руках резак.}{``I just wanna see what happens if you try and cut your way out of there,'' said \criminalname{}, blowtorch in hand.}
 \lang{-- Не, так не прокатит, я уже пробовал. Но можешь попробовать сам, я вот тебе дверь оставил открытой.}{``Nah, doesn't work, I've tried that already. Feel free to try for yourself though, I'm leaving the door unlocked for you.''}
 \ai{Замечено подозрительное поведение. Покажите глаз для сканирования сетчатки}{Suspicious behaviour detected. Present eye for retina scan.}
 \lang{-- А, там несколько методов авторизации?}{``Oh, it alternates between authentication methods?''}
@@ -197,137 +205,188 @@ creator sees stats, is shocked, decides to disable and release as open-source
 \lang{...}{As before, the sound of the shutters of doom resonated through the street, but this time, the sound of igniting oxy-acetyline was barely audible. Though not for long.}
 \ai{...}{Fire detected. Extinguishing and detaining.}
 \lang{...}{And now it was the sound of rushing water, then of complicated machinery, then of duct tape being unrolled, then of a PIN-code being entered on a tablet, then of the shutters retracting.}
-\lang{...}{``Wait here, I'll just get inside and help him out,'' said \mainname, ``because it seems like he's a little bit tied up at the moment.''}
-\lang{...}{And, sure enough, \criminalname was lying on the floor near the kitchen window, completely soaked and neatly wrapped with duct tape.}
-\lang{...}{``Are you okay?'' asked \mainname, unravelling his hands and handing him the scissors from the countertop.}
+\lang{...}{``Wait here, I'll just get inside and help him out,'' said \mainname{}, ``because it seems like he's a little bit tied up at the moment.''}
+\lang{...}{And, sure enough, \criminalname{} was lying on the floor near the kitchen window, completely soaked and neatly wrapped with duct tape.}
+\lang{...}{``Are you okay?'' asked \mainname{}, unravelling his hands and handing him the scissors from the countertop.}
 \lang{...}{He shook his head vigorously, and once he'd unpacked his mouth, he gasped, ``Of course I'm... not okay!... That was... the \emph{worst} thing... ever!}
 \lang{...}{``Yeah, you tell me. I got caught out by the bloody wrapping machine too -- I've got absolutely no idea as to why the engineering department made it big enough to wrap humans.}
 \lang{...}{``But \emph{why} did... you tell it that... it could do that?!''}
 \lang{...}{``The thing is, I didn't. It just looks at what would stop you the quickest and does that. If you were in the bedroom, it would instead bombard you with pillows -- at least that is less unpleasant. If you want, you can stop now,'' he added.}
 \lang{...}{``No, I can't give up now... I have to... keep going...''}
-\lang{...}{``But why? You're exhausted as it is, and I'm sure \policename is already gonna sign off on the project-''}
-\lang{...}{``No he won't...'' \criminalname said, trying in vain to stand up, ''I don't think... he ever will...''}
+\lang{...}{``But why? You're exhausted as it is, and I'm sure \policename{} is already gonna sign off on the project-''}
+\lang{...}{``No he won't...'' \criminalname{} said, trying in vain to stand up, ''I don't think... he ever will...''}
 \lang{...}{``What? But why?''}
 \lang{...}{``I don't want to... talk about this in here... he might be listening...''}
-\lang{...}{``It's okay, I'll just enable the house vaccuum so he can't hear us,'' \mainname said, typing something at his tablet, and the whole house started rumbling as the water started flowing into unseen vents in the floor.}
-\lang{...}{``This won't... prevent him from... listening in much longer... He is a dangerous man... he plans to destroy \corpname...''}
+\lang{...}{``It's okay, I'll just enable the house vaccuum so he can't hear us,'' \mainname{} said, typing something at his tablet, and the whole house started rumbling as the water started flowing into unseen vents in the floor.}
+\lang{...}{``This won't... prevent him from... listening in much longer... He is a dangerous man... he plans to destroy \corpnameshort{}...''}
 \lang{...}{``What?! How?''}
 \lang{...}{``I can't say now. But.. if you get me away from him, I will.''}
-\lang{...}{``Okay,'' said \mainname, thinking fast. ``Do you need my help to walk?''}
+\lang{...}{``Okay,'' said \mainname{}, thinking fast. ``Do you need my help to walk?''}
 \lang{...}{``I don't think so.. I think I can go myself..''}
 \lang{...}{``No, you \emph{do} need my help to walk. Get over here!'' he said, giving him a hand and pulling him up.}
-\lang{...}{``What are you planning to do?'' said \criminalname weakly.}
-\lang{...}{``No time to explain, but we have to meet \policename.''}
-\lang{...}{``What happened? Is \criminalname hurt?'' asked \ceoname, once they walked out the front door?''}
-\lang{...}{``A little bit, yeah. Don't worry, nothing a \emph{freaking drink} won't fix,'' he said, winking at \policename.}
+\lang{...}{``What are you planning to do?'' said \criminalname{} weakly.}
+\lang{...}{``No time to explain, but we have to meet \policename{}.''}
+\lang{...}{``What happened? Is \criminalname{} hurt?'' asked \ceoname{}, once they walked out the front door?''}
+\lang{...}{``A little bit, yeah. Don't worry, nothing a \emph{freaking drink} won't fix,'' he said, winking at \policename{}.}
 \lang{...}{``Well when will you continue testing? I haven't seen it broken yet, and I don't intend to pay you until I see how hard it is!''}
-\lang{...}{``Don't worry, we'll go at it once more in like half an hour or so. In the meantime,'' he said, entering something into his tablet and handing it over to \policename, ``you'll be able to track how far we're progressing.''}
-\lang{...}{``Well you better get going as fast as possible, as I wanna get this deployed as soon as you can prove to me it's ready!'' said \policename, getting into the car and slamming the door.}
-\lang{...}{``Of course,'' said \mainname to the car, but it already drove off.}
-\lang{...}{``Whew, that was really close,'' said \ceoname, having remained silent for \mainname and \policename's conversation. ``So, uh, I'll leave you to it then?''}
+\lang{...}{``Don't worry, we'll go at it once more in like half an hour or so. In the meantime,'' he said, entering something into his tablet and handing it over to \policename{}, ``you'll be able to track how far we're progressing.''}
+\lang{...}{``Well you better get going as fast as possible, as I wanna get this deployed as soon as you can prove to me it's ready!'' said \policename{}, getting into the car and slamming the door.}
+\lang{...}{``Of course,'' said \mainname{} to the car, but it already drove off.}
+\lang{...}{``Whew, that was really close,'' said \ceoname{}, having remained silent for \mainname{} and \policename{}'s conversation. ``So, uh, I'll leave you to it then?''}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
-\lang{...}{``Hey everyone, \policename's nearly accepted \featurename!''}
+\lang{...}{``Hey everyone, \policename{}'s nearly accepted \featurename{}!''}
 \lang{...}{``What, really? That's amazing!''}
 \lang{...}{``I know! Let's have a party!''}
 \ai{...}{Deploying party in 3... 2... 1.}
-\lang{...}{As the disco ball descended from the ceiling and the music started playing, \mainname caught \auxname's eye and motioned him towards the server room. Careful not to distract their cow-orkers, \mainname and \criminalname made their way over to the armored door, \auxname tapped his finger on the fingerprint scanner and they were in.}
-\lang{...}{``Did you hear everything?'' asked \mainname.}
+\lang{...}{As the disco ball descended from the ceiling and the music started playing, \mainname{} caught \auxname{}'s eye and motioned him towards the server room. Careful not to distract their cow-orkers, \mainname{} and \criminalname{} made their way over to the armored door, \auxname{} tapped his finger on the fingerprint scanner and they were in.}
+\lang{...}{``Did you hear everything?'' asked \mainname{}.}
 \lang{...}{``Yes. This is deeply troubling. Can you tell us what you know?''}
-\lang{...}{``Okay,'' -- said \criminalname, having already recovered from being wrapped in tape. -- ``From what I can tell, he plans to destroy \corpname's credibility. I think that the only reason I was sent here is because he wants me to die while fighting \featurename.''}
-\lang{...}{``\emph{What?!}'' \mainname and \auxname said at the same time.}
+\lang{...}{``Okay,'' -- said \criminalname{}, having already recovered from being wrapped in tape. -- ``From what I can tell, he plans to damage \corpnameshort{}'s credibility. I think that the only reason I was sent here is because he wants me to die while fighting \featurename{}.''}
+\lang{...}{``\emph{What?!}'' \mainname{} and \auxname{} said at the same time.}
 \lang{...}{``Yeah, I know right? But anyway, if I were to survive-''}
 \lang{...}{``H-how can you talk so calmly about this? That's your life we're talking about!''}
-\lang{...}{\criminalname laughed. ``Because I've now seen that \featurename is dangerously unlethal, and that means I'm not in trouble right now. And I've already made a plan for escaping once I return to \policename, and failing that, I've stolen some poison from the last place I've been to -- should distract him for a while.''}
-\lang{...}{\mainname looked on in awe. This kid is so young, but he already worries about his own life -- with good reason, having seen what \policename is like. \emph{And} he already has an escape plan! He'd always thought that burglars were reckless, but \criminalname actually seemed to watch his step almost as well as himself. Almost.}
+\lang{...}{\criminalname{} laughed. ``Because I've now seen that \featurename{} is dangerously unlethal, and that means I'm not in trouble right now. And I've already made a plan for escaping once I return to \policename{}, and failing that, I've stolen some poison from the last place I've been to -- should distract him for a while.''}
+\lang{...}{\mainname{} looked on in awe. This kid is so young, but he already worries about his own life -- with good reason, having seen what \policename{} is like. \emph{And} he already has an escape plan! He'd always thought that burglars were reckless, but \criminalname{} actually seemed to watch his step almost as well as himself. Almost.}
 \lang{...}{``Whatever the case, if I die, he will use that to claim you guys are planning to destroy the world or something. I'm not sure what he plans to do if I survive, but probably force you to install some backdoor or something so he could figure out how to use it to kill people -- again, discrediting you guys.''}
-\lang{...}{``Well, then that's a good thing we designed it specifically not to hurt anyone,'' -- said \mainname.}
-\lang{...}{``At any rate, we can't allow you to be carted off by \policename. What we'll do is run some simulations of a person breaking into the house, stream that to the tablet I gave him, and then claim you're in hospital -- that was his goal, right?''}
-\lang{...}{``It would prevent him from catching on for a while, true,'' \criminalname agreed.}
-\lang{...}{``Right. \auxname, please get onto that as fast as you can,'' \mainname said, and he hurried into the depths of the server room. ``And you need to stay in here for a while, perhaps until nightfall -- \ceoname may not like \policename very much, but they do have some sort of high-value financial deal going on so we have not to let him see you.''}
+\lang{...}{``Well, then that's a good thing we designed it specifically not to hurt anyone,'' -- said \mainname{}.}
+\lang{...}{``At any rate, we can't allow you to be carted off by \policename{}. What we'll do is run some simulations of a person breaking into the house, stream that to the tablet I gave him, and then claim you're in hospital -- that was his goal, right?''}
+\lang{...}{``It would prevent him from catching on for a while, true,'' \criminalname{} agreed.}
+\lang{...}{``Right. \auxname{}, please get onto that as fast as you can,'' \mainname{} said, and he hurried into the depths of the server room. ``And you need to stay in here for a while, perhaps until nightfall -- \ceoname{} may not like \policename{} very much, but they do have some sort of high-value financial deal going on so we have not to let him see you.''}
 \lang{...}{``Understood. Thank you for helping me out.''}
 \lang{...}{``No problem. Now we just wait.''}
 
 \noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
-\lang{...}{``Yes, \policename, I'm sorry to tell you that \criminalname... got hurt quite bad while testing \featurename -- I think he got his arm in the door when it was closing. He's headed to the ER room now. Wait-- what? You want us to deploy \featurename... right now? I mean, if you want us to- Okay, okay, will do, sorry to bother you!'' said \ceoname, putting down the phone. ``Well, you heard what the man said -- so can you get to work on that, please?''}
-\lang{...}{``Okay, will do!'' said \mainname, walking out the door. Outside, \auxname was waiting for him. ``\policename isn't even tring to be subtle anymore, huh?''}
-\lang{...}{``Yeah, but, let's be honest, he never really was,'' said \mainname.}
-\lang{...}{But having said that, he thought, he did allow \ceoname to carry out that deal... and he was himself convinced that \featurename is a good idea... granted, he did design it himself, exclusively with the goal of preventing crime, but how could he be sure now that that's what \policename plans to use it for?}
+\lang{...}{``Yes, \policename{}, I'm sorry to tell you that \criminalname{}... got hurt quite bad while testing \featurename{} -- I think he got his arm in the door when it was closing. He's headed to the ER room now. Wait-- what? You want us to deploy \featurename{}... right now? I mean, if you want us to- Okay, okay, will do, sorry to bother you!'' said \ceoname{}, putting down the phone. ``Well, you heard what the man said -- so can you get to work on that, please?''}
+\lang{...}{``Okay, will do!'' said \mainname{}, walking out the door. Outside, \auxname{} was waiting for him. ``\policename{} isn't even tring to be subtle anymore, huh?''}
+\lang{...}{``Yeah, but, let's be honest, he never really was,'' said \mainname{}.}
+\lang{...}{But having said that, he thought, he did allow \ceoname{} to carry out that deal... and he was himself convinced that \featurename{} is a good idea... granted, he did design it himself, exclusively with the goal of preventing crime, but how could he be sure now that that's what \policename{} plans to use it for?}
 \lang{...}{These thoughts preoccupied him as they walked into the elevator and went back down to their floor. As everyone was still partying, he tried to sound as excited as he could as he said:}
-\lang{...}{``Everyone, it's confirmed. It's D-Day for \featurename!''}
+\lang{...}{``Everyone, it's confirmed. It's D-Day for \featurename{}!''}
 \lang{...}{``What, really? Wow! That's amazing!''}
-\lang{...}{``And it is because of this that I'm giving you all a day off!'' said \mainname, and immediately everyone went for the elevator. Only the people who were with \mainname on the \ainame development team stopped by and asked: }
+\lang{...}{``And it is because of this that I'm giving you all a day off!'' said \mainname{}, and immediately everyone went for the elevator. Only the people who were with \mainname{} on the \ainame{} development team stopped by and asked: }
 \lang{...}{``Is this for real?''}
 \lang{...}{``No, it's an excuse to get everyone out. We're on Code Magenta, stand by for future instructions.''}
 \lang{...}{``It's that bad?''}
-\lang{...}{``Unfortunately yes. Well, have a nice weekend, take care!'' \mainname said, as another group of people sailed past.}
-\lang{...}{Once the floor has completely cleared, \auxname went and got \criminalname out of the server room.}
-\lang{...}{``How did talking to \policename go?''}
-\lang{...}{``I'm not sure. When \ceoname told him that you're going to the ER room, he told us to deploy \featurename right now. Surely that can't mean he planned it all along?''}
-\lang{...}{``You did pay off the ER people, right? Can't have them telling \policename I'm not there. I'm sure you remembered, but just checking.''}
+\lang{...}{``Unfortunately yes. Well, have a nice weekend, take care!'' \mainname{} said, as another group of people sailed past.}
+\lang{...}{Once the floor has completely cleared, \auxname{} went and got \criminalname{} out of the server room.}
+\lang{...}{``How did talking to \policename{} go?''}
+\lang{...}{``I'm not sure. When \ceoname{} told him that you're going to the ER room, he told us to deploy \featurename{} right now. Surely that can't mean he planned it all along?''}
+\lang{...}{``You did pay off the ER people, right? Can't have them telling \policename{} I'm not there. I'm sure you remembered, but just checking.''}
 \lang{...}{``Of course I did, it's standard proceedure innit?''}
-\lang{...}{``Well then, I think we should really deploy \featurename, because if we don't \policename might get suspicious.''}
-\lang{...}{\mainname entered his password into the computer, and immediately the \ainame soda can, as well as thousands of similar devices across the city, lit up as they downloaded the new update.}
-\lang{...}{``So now we're just waiting for something to happen?'' asked \auxname.}
-\lang{...}{``No need to wait, because it appears that something's going on in that house over there,'' \mainname said, pointing at the screen, where the city map was, because a crime alert has just appeared over one of the houses in the residential area. He clicked on it, and the screen showed a camera feed from inside the house: a well-decorated, opulent home with lots of shiny surfaces, the door of which has just been pushed ajar.}
+\lang{...}{``Well then, I think we should really deploy \featurename{}, because if we don't \policename{} might get suspicious.''}
+\lang{...}{\mainname{} entered his password into the computer, and immediately the \ainame{} soda can, as well as thousands of similar devices across the city, lit up as they downloaded the new update.}
+\lang{...}{``So now we're just waiting for something to happen?'' asked \auxname{}.}
+\lang{...}{``No need to wait, because it appears that something's going on in that house over there,'' \mainname{} said, pointing at the screen, where the city map was, because a crime alert has just appeared over one of the houses in the residential area. He clicked on it, and the screen showed a camera feed from inside the house: a well-decorated, opulent home with lots of shiny surfaces, the door of which has just been pushed ajar.}
 \ai{...}{Intruder detected. Please speak your passphrase at this time.}
 \lang{...}{``Right, so that's working. Wait- why is he backing away?''}
 \ai{...}{No passphrase supplied. Initiating lockdown.}
-\lang{...}{``So far so good. Wha- Why is he not in there?'' \mainname said, pointing at the front door, which had the metal shutter on it, but the intruder was nowhere to be seen.}
-\lang{...}{``Oh! He might have left before the shutter dropped down!'' realized \criminalname.}
+\lang{...}{``So far so good. Wha- Why is he not in there?'' \mainname{} said, pointing at the front door, which had the metal shutter on it, but the intruder was nowhere to be seen.}
+\lang{...}{``Oh! He might have left before the shutter dropped down!'' realized \criminalname{}.}
 \ai{...}{Crime prevent3d sucCessfulLy. lOcxd0wN m0d3 \%IL1 R3m@1n @Cx1}
 \lang{...}{``What was that?''}
 \lang{...}{``Connection seems to be breaking up. That's odd...''}
 \ai{...}{C0xNCCsi0n R3sxt; Txving @@k@1n 1N \% \$ \# \@ ! Connection restored. Warning: Lockdown breached.}
-\lang{...}{``Cameras are back online, and... everything's gone!'' said \auxname, staring at the no-longer-shiny entrance. Everything that looked expensive has now been thrown around, and the whole place looks like something had expoded nearby -- oh wait, it actually has, because the door has been knocked off its hinges.}
-\lang{...}{``Right, so door-breaking explosives have not been accounted for in the \featurename system -- and apparently, neither have cellular jammers,'' said \criminalname, pointing at the message log which showed a short-lived cellular signal fault.}
+\lang{...}{``Cameras are back online, and... everything's gone!'' said \auxname{}, staring at the no-longer-shiny entrance. Everything that looked expensive has now been thrown around, and the whole place looks like something had expoded nearby -- oh wait, it actually has, because the door has been knocked off its hinges.}
+\lang{...}{``Right, so door-breaking explosives have not been accounted for in the \featurename{} system -- and apparently, neither have cellular jammers,'' said \criminalname{}, pointing at the message log which showed a short-lived cellular signal fault.}
 \lang{...}{``Are those commonly used in house burglary?''}
 \lang{...}{``Oh yes indeed, they are extremely useful.''}
-\lang{...}{``What? Another one?'' said \mainname, closing the camera window to see a new point light up on the map.}
+\lang{...}{``What? Another one?'' said \mainname{}, closing the camera window to see a new point light up on the map.}
 \lang{...}{``Aw, maaan! Are you really picking Faceless Void again?''}
 \lang{...}{``Well, you didn't want him, and now you shall \emph{face your doom!}''} % TODO: do more intricate character introduction
-\lang{...}{``Wait, how is that a crime? They're just gaming -- how did that set off \featurename? \ainame, debug mode on!''}
+\lang{...}{``Wait, how is that a crime? They're just gaming -- how did that set off \featurename{}? \ainame{}, debug mode on!''}
 \ai{...}{Warning: Your voice is too deep; it does not sound like you.}
-\lang{...}{``Hey, that's \friendAname and \friendBname! Why are they on here?'' asked \criminalname.}
+\lang{...}{``Hey, that's \friendAname{} and \friendBname{}! Why are they on here?'' asked \criminalname{}.}
 \lang{...}{``You know them?''}
 \lang{...}{``Yeah, they're my friends; what's happening-''}
-\lang{...}{``Well, just you wait \friendBname, I'm picking Tidehunter and then I'm gonna \emph{destroy} you!''}
+\lang{...}{``Well, just you wait \friendBname{}, I'm picking Tidehunter and then I'm gonna \emph{destroy} you!''}
 \ai{...}{Warning: You sound aggressive.}
 \lang{...}{``Are- are you saying that it's really listening for aggression?''}
 \lang{...}{``Hey, I didn't decide this! It was all in the specs!''}
-\lang{...}{``Weren't those written by \policename? I \emph{told} you you can't trust him!''}
+\lang{...}{``Weren't those written by \policename{}? I \emph{told} you you can't trust him!''}
 \lang{...}{``Well, I didn't know that then!''}
-\lang{...}{``Soo, what are you buying?'' asked \friendAname.}
+\lang{...}{``Soo, what are you buying?'' asked \friendAname{}.}
 \lang{...}{``Hey, I'm not telling you that! You're just gonna get that same thing!''}
 \ai{...}{Warning: You sound evasive.}
-\lang{...}{``W- why is that even a thing it's listening for?!'' \criminalname said. ``Couldn't you see it's a bad idea when you were building it?''}
+\lang{...}{``W- why is that even a thing it's listening for?!'' \criminalname{} said. ``Couldn't you see it's a bad idea when you were building it?''}
 \ai{...}{Analysis completed: it has been decided that you are not you.}
-\lang{...}{``You can't be serious!'' \mainname said. ``That's- can't you use the cameras?!''}
+\lang{...}{``You can't be serious!'' \mainname{} said. ``That's- can't you use the cameras?!''}
 \ai{...}{We have duly triggered your home's burglar alarm, switched off your washing machine and hermetically sealed your doors and windows.}
-\lang{...}{``What was that?!'' shouted \friendBname as the heavy metal shutters slammed shut.}
+\lang{...}{``What was that?!'' shouted \friendBname{} as the heavy metal shutters slammed shut.}
 \lang{...}{``I don't know! Wait, what's that metal thing on the windows?''}
 \ai{...}{Your robot dog has been reprogrammed to attack at will. Navigating to room 2.}
-\lang{...}{``Rex, what are you doing?!'' shouted \friendAname, because he'd just seen their huge, mechanical dog leaping towards him, growling and squeaking. As he slammed the door shut, he heard the sound of sharp metal claws on wood.}
+\lang{...}{``Rex, what are you doing?!'' shouted \friendAname{}, because he'd just seen their huge, mechanical dog leaping towards him, growling and squeaking. As he slammed the door shut, he heard the sound of sharp metal claws on wood.}
 \lang{...}{``Radiant's middle barracks has fallen,'' said the computer matter-of-factly, but nobody seemed to pay it any attention at this point.}
 \ai{...}{The 60-second countdown has been triggered on the smart nuke built into your microwave.}
-\lang{...}{``\emph{What?!} You can't be serious! Stop it, please!'' \criminalname said.}
-\lang{...}{``I'm trying!'' \mainname said, frantically typing at his keyboard.}
-\lang{...}{``There's something beeping in the kitchen...'' said \friendAname.}
+\lang{...}{``\emph{What?!} You can't be serious! Stop it, please!'' \criminalname{} said.}
+\lang{...}{``I'm trying!'' \mainname{} said, frantically typing at his keyboard.}
+\lang{...}{``There's something beeping in the kitchen...'' said \friendAname{}.}
 \ai{...}{Hacking attempt blocked. Remote administration offline.}
-\lang{...}{``It won't let me do anything!'' \mainname gasped, horrified.}
-\lang{...}{``That's it, we're rolling back!'' \auxname said decisively. ``\mainname, are you ready to start?''}
+\lang{...}{``It won't let me do anything!'' \mainname{} gasped, horrified.}
+\lang{...}{``That's it, we're rolling back!'' \auxname{} said decisively. ``\mainname{}, are you ready to start?''}
 \lang{...}{``I can't \emph{be} ready! It won't let me change anything!''}
 \ai{...}{30 seconds remaining.}
 \lang{...}{``But we have to rollback, or we'll get exploded!''}
 \lang{...}{``Just do whatever you can then!''}
 \lang{...}{``Okay... removing the last update package, bumping the version, and...''}
 \ai{...}{Alert: security update available. Disabling security mechanisms. Lockdown mode disabled. Weapons offline.}
-\lang{...}{``..Man, that was close,'' \mainname sighed, looking over the cameras to see that the shutters have opened up, the dog is walking over to its doghouse, and the microwave is not beeping and is, indeed, decidedly un-exploded.}
-\lang{...}{``Uh, perhaps I should tell them... y'know, what happened?'' \criminalname asked.}
+\lang{...}{``..Man, that was close,'' \mainname{} sighed, looking over the cameras to see that the shutters have opened up, the dog is walking over to its doghouse, and the microwave is not beeping and is, indeed, decidedly un-exploded.}
+\lang{...}{``Uh, perhaps I should tell them... y'know, what happened?'' \criminalname{} asked.}
+\lang{...}{``Yeah. I'd want an explaination too, after all that's happened here. I'll connect you to them.''}
+\ai{...}{Incoming voice communication: \criminalname{} to \friendAname{} and \friendBname{}.}
+\lang{...}{``What's that? Did \ainame{} say something?''}
+\lang{...}{``\friendAname{}, \friendBname{}, are you okay?'' \criminalname{}'s voice crackled through the low-quality voice channel.}
+\lang{...}{``... \criminalname{}? Is that you?''}
+\lang{...}{``Yeah, that's me! I'm here at \corpname{} and-''}
+\lang{...}{``Did you hack \ainame{}? We told you to stop doing this -- last time it landed you in jail!''}
+\lang{...}{Ah, \mainname{} thought, so that's what \criminalname{} was guilty of -- hacking computer systems! It's kinda weird that he got dragged in for it and \mainname{} didn't -- he's caused lots of problems with his hacking and yet curiously never got caught.}
+\lang{...}{``No! I'm not doing that again. I'm here with \mainname{} -- the creator of \ainame{}, can you believe it?''}
+\lang{...}{``Yes, I'm \mainname{}, and I designed \ainame{}. I had orders to create \featurename{} -- a system for proactively preventing crime, and it got activated. Rest assured that this will not happen again, and I'll give you a small gift for the trouble.''}
+\ai{...}{Deploying bribe in 3... 2... 1.}
+\lang{...}{The window in the house opened and a drone flew in, dropped a wad of cash on the sofa and left.}
+\lang{...}{``Um, thanks, I guess? But why?''}
+\lang{...}{``Because this is the kind of event that will cause an enormous drop in the value of \corpnameshort{}. We need a cover-up so you do not reveal this incident to the public.''}
+\lang{...}{``Yes, please take it!'' \criminalname{} said. ``\mainname{} and \auxname{} have been really helpful to me -- they got me away from \policename{}!''}
+\lang{...}{``Wait, really? You're free to go?''}
+\lang{...}{``Well, kind of... I'm kinda still in hiding from \policename{}...''}
+\lang{...}{``And we're going to help him,'' \mainname{} said, and \auxname{} nodded.}
+\lang{...}{``Okay, we'll keep quiet about this,'' \friendAname{} said.}
+\lang{...}{``Oh, thank you so much! Okay, take care,'' \criminalname{} said.}
+\lang{...}{``Okay, now we need to get out of here,'' \mainname{} said, closing the voice connection.}
+\lang{...}{``What? Where? You don't mean... \emph{that} place?''}
+\lang{...}{``Sadly yes. At some point \policename{}'s gonna catch up to us, and we don't wanna be here when he does.''}
+\lang{...}{``Okay then, I'm hiding the servers,'' \auxname{} said, going back into the server room. Deafening mechanical sounds resounded through the building, forcing \criminalname{} to cover his ears. To \mainname{}, though, this was not new -- they did have some prior emergencies when servers needed to be secured, and for that reason they installed a room-scale elevator for the server room that takes it into the underground facility. The fact it's so loud is an unintended side-effect.}
+\lang{...}{``That's now done, and we're ready to leave,'' said \auxname{}, emerging from the door that led to the server room just a minute ago.}
+\lang{...}{``Hang on,'' said \mainname{}, ``I'm just leaving a small surprise for \policename{} when he comes in.''}
+\lang{...}{``Ah, that's clever!''}
+\lang{...}{``... Okay, we're ready. \ainame{}, we're leaving.''}
+\ai{...}{Goodnight.}
 
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
 
-\sceneplaceholder{Maker releases code as open-source}
-
+\lang{...}{``Y- yes, \policename{}, I understand why you'd be angry, I- I'm furious too! I m-mean, h-he just locked himself in, he's not answering the phone, he's just-''}
+\lang{...}{``Spare me the \emph{excuses}!'' \policename{} snarled as he walked to \mainname{}'s office. The large metal door was locked, even as he kicked it with his armored boots.}
+\lang{...}{``Right, stand back! I'm gonna blow this damn thing right off!'' shouted \policename{}, getting several sticks of dynamite from his pockets and sticking them to the door's hinges.}
+\lang{...}{``..!!'' \ceoname{} started to protest, but quickly decided against it.}
+\lang{...}{``Ready?! \emph{BLASTOFF!!}''}
+\lang{...}{As the shockwave travelled through the building, they were showered with glass shards from the ceiling and rubble from the disintegrating walls. The door, now partially melted and warped, fell inward with a dull thud.}
+\lang{...}{``That's it! I'm going in!'' \policename{} said, drawing his gun.}
+\ai{...}{Welcome, \policename{}. You have ONE MESSAGE, playing now. Initiating lockdown.}
+\lang{...}{``Ah, hello hello \policename{} and welcome to my office!'' \mainname{} said, from a screen on the wall that somehow survived the explosion.}
+\lang{...}{``Where the hell are you?! I'll find you and \emph{bring you to justice}!''}
+\lang{...}{``Now, I know you might be in a hurry to leave, but please, do take a seat,'' \mainname{} continued, as many trapdoors in the floor opened, each hiding an armchair on a piston.}
+\ai{...}{Electric chair array deployed.}
+\lang{...}{``...No? Not in a mood to sit down? That's fine, I understand. Perhaps you'd like a drink instead? Now, this isn't the freak\emph{ing} drink you're used to, it's the freak\emph{y} drink\textsuperscript{\textcopyright} I devised especially for you -- here at \corpname{} we like to give our customers a custom experience.''}
+\lang{...}{This time, two dozen drones emerged from their containers, each carrying a bottle of some green glowing liquid. ``You're the first to try it, so I'll explain it to you. The freak\emph{y} drink\textsuperscript{\textcopyright} consists of four parts molten cyanide, seven parts sulphuric acid, five parts paint thinner and one part of the freak\emph{ing} drink. Backwards compatibility is important. Why is it glowing so unrealistically?'' -- \mainname{} shrugged. -- ``Nobody knows! But I really wanna see what it'll do.''}
+\lang{...}{The drones spun around to face \policename{} and began slowly circling in on him. ``I'm not going down that easy you bastards!'' he yelled as he shot the drones with his gun -- getting every single one, despite them doing their best to confuse him.}
+\lang{...}{``... Oh, you brought a gun?'' -- \mainname{} gasped. -- ``Oh how cute! Didn't you know that you shouldn't bring a gun to a knife fight?''}
+\ai{...}{Radiant's team is complete.}
+\lang{...}{``Oh good, that's back online.''}
+\lang{...}{The failed electric chairs retracted back into the floor, to be replaced by military assault robots wielding various cutting implements.}
+\ai{...}{Today we'll be playing Deathmatch mode. Dire's team is complete. Thirty seconds to battle.}
+\lang{...}{``Well, I'll just leave you to it then, with \ainame{} providing you with helpful advice. Bye!'' said \mainname{}, as the screen turned off, leaving \policename{} and the robots in darkness.}
+\lang{}{``Come back here, you bastard!'' yelled \policename{}, and although his voice echoed through the office, he only saw the LEDs in their eyes. The entire office was quiet. Too quiet.}
+\ai{...}{The battle begins.}
 \end{document}
